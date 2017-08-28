@@ -1,0 +1,9 @@
+caseName,uid,deviceId,order,value1,value2,value3,value4,assert,statusNum
+【控制设备：ZigBee】窗帘：开,5cffffe200b2,b06299437ae44f458e3e403c5790a97a,open,100,0,0,0,"""status"": 0"
+【控制设备：ZigBee】窗帘：value2~value4赋值,5cffffe200b2,b06299437ae44f458e3e403c5790a97a,close,0,-20,100,50,"""status"": 0"
+【控制设备：ZigBee】窗帘：value1和order不匹配,5cffffe200b2,b06299437ae44f458e3e403c5790a97a,open,0,-20,100,50,"""status"": 0"
+【控制设备：ZigBee】窗帘：value1和order不匹配,5cffffe200b2,b06299437ae44f458e3e403c5790a97a,close,50,-20,100,50,"""status"": 0"
+
+
+
+

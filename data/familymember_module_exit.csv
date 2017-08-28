@@ -1,0 +1,4 @@
+testcase_exit,familyId_exit,assertion_exit
+familyId为空字符,emptyStr,26
+familyId无关联,familyId_other_1,26
+正常,familyId_1,0

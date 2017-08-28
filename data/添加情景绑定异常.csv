@@ -1,0 +1,6 @@
+casename,uid,deviceId,actionName,order,value2,assertion
+uid,null,45c852eee0464cefb8e17f65751b31e8,开,on,100,response is null
+deviceId,5cffffe200b2,null,开,on,100,"""status"": 1"
+actionName,5cffffe200b2,45c852eee0464cefb8e17f65751b31e8,null,on,100,"""status"": 1"
+order,5cffffe200b2,45c852eee0464cefb8e17f65751b31e8,开,null,100,"""status"": 1"
+value2,5cffffe200b2,45c852eee0464cefb8e17f65751b31e8,开,,null,"""status"": 1"

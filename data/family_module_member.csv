@@ -1,0 +1,4 @@
+testcase_member,familyId_member,assertion_member
+正常,familyId_1,0
+familyId为空字符串,emptyStr,1
+familyId无关联,familyId_other_1,1

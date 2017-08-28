@@ -1,0 +1,14 @@
+testcase_set,userName_set,FamilyId_set,securityId_set,isArm_set,checkoutOnline_set,delay_set,assertion_set
+在家安防(不检查主机状态),userName,FamilyId,securityId_home_1,0,0,0,0
+外出安防(不检查主机状态),userName,FamilyId,securityId_away_1,0,0,0,1
+在家安防(检查主机状态),userName,FamilyId,securityId_home_1,0,1,0,0
+外出安防(检查主机状态),userName,FamilyId,securityId_away_1,0,1,0,1
+在家撤防,userName,FamilyId,securityId_home_1,1,0,0,0
+外出撤防,userName,FamilyId,securityId_away_1,1,0,0,0
+familyId空字符串,userName,emptyStr,securityId_home_1,0,0,0,1
+securityId空字符串,userName,FamilyId,emptyStr,0,0,0,26
+familyId非用户家庭,userName,FamilyId_other_1,securityId_home_1,0,0,0,1
+securityId非当前用户,userName,FamilyId,securityId_other_1,0,0,60,1
+checkoutOnline为-1,userName,FamilyId,securityId_home_1,0,-1,0,1
+delay为-1,userName,FamilyId,securityId_home_1,0,0,-1,1
+外出安防延时60s,userName,FamilyId,securityId_away_1,0,0,60,0

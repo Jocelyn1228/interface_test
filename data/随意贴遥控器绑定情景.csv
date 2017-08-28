@@ -1,0 +1,6 @@
+系统情景全开,1,0,2,8e68dab3ffa544a99e9d3b1036b378d9,系统情景灯光全开,scene control,0,0,0,0
+系统情景全关,2,0,2,861ed7dc26a644a39b767b77edcb2ab8,系统情景灯光全关,scene control,0,0,0,0
+情景xhl（灯光19开）,4,0,2,7beaf2b32ff04955958bf736d938ec69,情景xhl（灯光19开）,scene control,0,0,0,0
+外出布防,3,0,2,258cc7b9301b42c498b889db056c0335,外出布防,outside security,0,0,0,0
+在家布防,4,0,2,258cc7b9301b42c498b889db056c0335,在家布防,inside security,0,0,0,0
+撤防,1,0,2,258cc7b9301b42c498b889db056c0335,撤防,cancel security,0,0,0,0

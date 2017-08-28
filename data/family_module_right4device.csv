@@ -1,0 +1,8 @@
+testcase_right4device,userId_right4device,familyId_right4device,assertion_right4device
+正常-超级管理员,userId_1,familyId_1,0
+正常-普通管理员,userId_admin_1,familyId_1,0
+正常-家庭成员,userId_member_1,familyId_1,0
+无关联用户,userId_other_1,familyId_1,1
+无关联家庭,userId_1,familyId_other_1,1
+userId为空字符串,emptyStr,familyId_1,1
+familyId为空字符串,userId_1,emptyStr,1

@@ -1,0 +1,10 @@
+testcase_notifyAdd,securityId_notifyAdd,memberName_notifyAdd,memberPhone_notifyAdd,memberSortNum_notifyAdd,assertion_notifyAdd
+在家安防,securityId_home_1,13112345678,13112345678,1,0
+外出安防,securityId_away_1,13112345678,13112345678,2,0
+securityId空字符串,emptyStr,13112345678,13112345678,3,64
+securityId非当前用户,securityId_other_1,13112345678,13112345678,4,64
+memberName空字符串,securityId_home_1,,13112345678,2,1
+memberPhone空字符串,securityId_home_1,13112345678,,2,64
+memberSortNum为0,securityId_home_1,13112345678,13112345678,0,1
+memberSortNum为6,securityId_home_1,13112345678,13112345678,6,1
+memberPhone非法,securityId_home_1,13112345678,haha13112345678,2,1

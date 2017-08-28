@@ -1,0 +1,5 @@
+testcase_lastmessage,familyId_lastmessage,lastUpdateTime_lastmessage,assertion_lastmessage
+正常,b094908e9a3d4cb7981331eb055d0d63,1493568000,0
+famiyId为空字符串,,1493568000,1
+lastUpdateTime格式错误,b094908e9a3d4cb7981331eb055d0d63,1.50E+12,1
+familyId无关联,00a429c883534c02af98a8fb1d5b6ab9,1493568000,1

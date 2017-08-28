@@ -1,0 +1,26 @@
+caseName,linkageName,userName_title,familyId_title,linkageType,deviceId,uid,authorizedId,startTimeValue,endTimeValue,weekValue,lastUpdateTime_title,AssertName
+【创建联动_添加设备_按照设备的状态】打开门窗传感器_触发联动一,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,5400,7200,136,lastUpdateTime,"""status"": 0"
+【创建联动_添加设备_按照设备的状态】有人经过人体红外传感器_触发联动一,人体红外传感器,userName,defaultFamilyId,0,7d386ff543e146f19ff7d6a172222314,5cffffe200b2,-1,7200,10800,136,lastUpdateTime,"""status"": 0"
+【创建联动_添加设备_按照设备的状态】可燃气体报警_触发联动一,可燃气体报警联动,userName,defaultFamilyId,0,147dbd0384584cbaa5e6bc97f39c54b3,5cffffe200b2,-1,10800,14400,136,lastUpdateTime,"""status"": 0"
+【创建联动_添加设备_按照设备的状态】一氧化碳报警器报警_触发联动一,一氧化碳报警器联动,userName,defaultFamilyId,0,31901a2ff73843a89507796e6c113f72,5cffffe200b2,-1,14400,18000,136,lastUpdateTime,"""status"": 0"
+【创建联动_添加设备_按照设备的状态】水浸探测器检测到有水浸入_触发联动一,水浸探测仪联动,userName,defaultFamilyId,0,f837c2a0c00d4576a99b46d477eb9ad9,5cffffe200b2,-1,18000,21600,136,lastUpdateTime,"""status"": 0"
+【创建联动_添加设备_按照设备的状态】紧急按钮_触发联动一,紧急按钮触发联动,userName,defaultFamilyId,0,0e19c8dcd1ea48e388ae43a7c2148428,5cffffe200b2,-1,21600,25200,136,lastUpdateTime,"""status"": 0"
+【创建联动_添加设备_按照设备的状态】甲醛检测仪报警_触发联动一,甲醛检测仪联动,userName,defaultFamilyId,0,d37025cbdbd74914a7f7ae75e9ef2920,6001940af596,-1,25200,28800,129,lastUpdateTime,"""status"": 0"
+【创建联动】门锁异常授权,门锁开锁触发联动一,userName,defaultFamilyId,0,cd090cc3ec9b4ad1a182914ac8782409,,100,5340,5400,136,lastUpdateTime,"""status"": 1"
+【创建联动】开始时间不合理,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,-1,5220,136,lastUpdateTime,"""status"": 0"
+【创建联动】截止时间不合理,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,5400,500000000,136,lastUpdateTime,"""status"": 0"
+【创建联动】startTime大于endTime,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,6000,5700,136,lastUpdateTime,"""status"": 0"
+【创建联动】StartTime不合法（-1）,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,-1,6300,136,lastUpdateTime,"""status"": 0"
+【创建联动】weekvalue超过最大边界值,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,5040,5340,256,lastUpdateTime,"""status"": 0"
+【创建联动】weekvalue小于最小边界值,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,4740,5040,128,lastUpdateTime,"""status"": 0"
+【创建联动】linkageType为空,门窗传感器联动,userName,defaultFamilyId,,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,3840,4140,136,lastUpdateTime,null
+【创建联动】通过设备状态触发联动，deviceId为空,门窗传感器联动,userName,defaultFamilyId,0,,5cffffe200b2,-1,3540,3840,136,lastUpdateTime,response is null or response length less 4
+【创建联动】当门锁触发联动，authorizedId为空时,打开门锁联动,userName,defaultFamilyId,0,cd090cc3ec9b4ad1a182914ac8782409,,,3240,3540,136,lastUpdateTime,response is null or response length less 4
+【创建联动】startTime为空,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,,7200,136,lastUpdateTime,null
+【创建联动】endTime为空,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,5400,,136,lastUpdateTime,null
+【创建联动】weekvalue为空,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,2940,3240,,lastUpdateTime,null
+【创建联动】lastUpdateTime为空,门窗传感器联动,userName,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,2640,2940,136,valueOfNull,response is null or response length less 4
+【创建联动】userName为空,门窗传感器联动,valueOfNull,defaultFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,2040,2340,136,lastUpdateTime,response is null or response length less 4
+【创建联动】familyId为空,门窗传感器联动,userName,valueOfNull,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,1740,2040,136,lastUpdateTime,null
+【创建联动】触发联动条件不合法（linkageType）,门窗传感器联动,userName,defaultFamilyId,5,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,5400,7200,136,lastUpdateTime,response is null or response length less 4
+【创建联动】userName和familyId不匹配,门窗传感器联动,userName,noFamilyId,0,fd9f0d89025d425088ba65f804152b20,5cffffe200b2,-1,5400,7200,136,lastUpdateTime,response is null or response length less 4

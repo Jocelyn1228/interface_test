@@ -1,0 +1,13 @@
+testcase_notifyModify,securityId_notifyModify,warningMemberId_notifyModify,memberName_notifyModify,memberPhone_notifyModify,memberSortNum_notifyModify,assertion_notifyModify
+联系人名字,securityId_home_1,warningMemberId,test,13112345678,2,0
+安防电话联系人序号,securityId_home_1,warningMemberId,13112345678,13112345678,2,0
+securityId为外出安防,securityId_away_1,warningMemberId,13112345678,13112345678,3,1
+warningMemberId空字符串,securityId_home_1,emptyStr,13112345678,13112345678,1,1
+warningMemberId非当前用户,securityId_home_1,warningMemberId_other_1,13112345678,13112345678,1,1
+securityId空字符串,emptyStr,warningMemberId,13112345678,13112345678,1,1
+securityId非当前用户,securityId_other_1,warningMemberId,13112345678,13112345678,1,1
+memberName空字符串,securityId_home_1,warningMemberId,,13112345678,1,1
+memberPhone空字符串,securityId_home_1,warningMemberId,13112345678,,1,1
+memberSortNum为0,securityId_home_1,warningMemberId,13112345678,13112345678,0,1
+memberSortNum为6,securityId_home_1,warningMemberId,13112345678,13112345678,6,1
+memberPhone非法,securityId_home_1,warningMemberId,13112345678,haha13112345678,1,1

@@ -1,0 +1,5 @@
+casename,userName,uid,deviceId,alarmLevel,assertion
+username为空,null,6001940af596,d37025cbdbd74914a7f7ae75e9ef2920,1,"""status"": 1"
+uid为空,xuhuilin@orvibo.com,null,d37025cbdbd74914a7f7ae75e9ef2920,2,"""status"": 1"
+deviceId为空,xuhuilin@orvibo.com,6001940af596,null,3,"""status"": 1"
+alarmLevel为空,xuhuilin@orvibo.com,6001940af596,d37025cbdbd74914a7f7ae75e9ef2920,null,"""status"": 1"

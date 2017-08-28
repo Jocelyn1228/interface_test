@@ -1,0 +1,26 @@
+testcase_timing,userName_timing,uid_timing,deviceId_timing,order_timing,hour_timing,minute_timing,week_timing,timingType_timing,assertion_timing
+系统情景00:00单次,userName,familyId_default_1,sceneId_system_1,scene control,0,0,0,3,0
+自定义情景00:00单次,userName,familyId_default_1,sceneId_custom_1,scene control,0,0,0,3,0
+外出安防00:00单次,userName,familyId_default_1,securityId_home_1,outside security,0,0,0,4,0
+在家安防00:00单次,userName,familyId_default_1,securityId_away_1,inside security,0,0,0,4,0
+撤防00:00单次,userName,familyId_default_1,,cancel security,0,0,0,4,0
+系统情景23:59单次,userName,familyId_default_1,sceneId_system_1,scene control,23,59,0,3,0
+系统情景06:30每天,userName,familyId_default_1,sceneId_system_1,scene control,6,30,255,3,0
+系统情景12:00周一到周五,userName,familyId_default_1,sceneId_system_1,scene control,12,0,159,3,0
+系统情景18:45周末,userName,familyId_default_1,sceneId_system_1,scene control,18,45,224,3,0
+familyId空字符串,userName,emptyStr,sceneId_system_1,scene control,0,0,0,3,1
+order空字符串,userName,familyId_default_1,sceneId_system_1,,0,0,0,3,1
+hour为-1,userName,familyId_default_1,sceneId_system_1,scene control,-1,0,0,3,1
+hour为24,userName,familyId_default_1,sceneId_system_1,scene control,24,0,0,3,1
+minute为-1,userName,familyId_default_1,sceneId_system_1,scene control,0,-1,0,3,1
+minute为60,userName,familyId_default_1,sceneId_system_1,scene control,0,60,0,3,1
+week为-1,userName,familyId_default_1,sceneId_system_1,scene control,0,0,-1,3,1
+week为256,userName,familyId_default_1,sceneId_system_1,scene control,0,0,256,3,1
+familyId非用户家庭,userName,familyId_other_1,sceneId_system_1,scene control,0,0,0,3,1
+securityId非当前用户,userName,familyId_default_1,securityId_other_1,outside security,0,0,0,4,1
+sceneId非当前用户,userName,familyId_default_1,sceneId_other_1,scene control,0,0,0,3,1
+securityId与order不匹配,userName,familyId_default_1,securityId_home_1,scene control,0,0,0,4,1
+sceneId与order不匹配,userName,familyId_default_1,sceneId_system_1,inside security,0,0,0,3,1
+securityId与timingType不匹配,userName,familyId_default_1,securityId_home_1,inside security,0,0,0,3,1
+sceneId与timingType不匹配,userName,familyId_default_1,sceneId_system_1,scene control,0,0,0,4,1
+order与timingType不匹配,userName,familyId_default_1,sceneId_system_1,inside security,0,0,0,4,1

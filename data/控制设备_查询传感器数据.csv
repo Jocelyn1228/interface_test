@@ -1,0 +1,3 @@
+caseName,uid,deviceId,dataType,resultAssert
+【查询传感器数据】正常场景：CO,5cffffe200b2,31901a2ff73843a89507796e6c113f72,1,"""status"": 0"
+【查询传感器数据】正常场景：甲醛,6001940af596,e63b233c622e4b8ba8ffb0862ee60c39,2,"""status"": 0"

@@ -1,0 +1,4 @@
+testcase_host_online,familyId_host_online,assertion_host_online
+正常,familyId_1,0
+无关联家庭,familyId_other_1,60
+familyId为空字符串,emptyStr,60

@@ -1,0 +1,2183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="模式定时" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <longProp name="ThreadGroup.start_time">1495434823000</longProp>
+        <longProp name="ThreadGroup.end_time">1495434823000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="用户参数" enabled="true">
+          <collectionProp name="UserParameters.names">
+            <stringProp name="3367">ip</stringProp>
+            <stringProp name="3446913">port</stringProp>
+            <stringProp name="-266666762">userName</stringProp>
+            <stringProp name="1216985755">password</stringProp>
+            <stringProp name="115792">uid</stringProp>
+            <stringProp name="-845312707">uid_xf</stringProp>
+            <stringProp name="1454539764">uid_allone</stringProp>
+            <stringProp name="-596889823">uid_s20c</stringProp>
+            <stringProp name="-434927231">uid_S30</stringProp>
+            <stringProp name="94988720">ctime</stringProp>
+            <stringProp name="-1563687972">deviceId_xf</stringProp>
+            <stringProp name="1819710227">deviceId_allone</stringProp>
+            <stringProp name="-1563688451">deviceId_hw</stringProp>
+            <stringProp name="533261824">deviceId_S20C</stringProp>
+            <stringProp name="-1229723966">deviceId_S30</stringProp>
+            <stringProp name="1109191185">deviceId</stringProp>
+            <stringProp name="534450656">deviceId_ykq1</stringProp>
+            <stringProp name="534450657">deviceId_ykq2</stringProp>
+            <stringProp name="534450658">deviceId_ykq3</stringProp>
+          </collectionProp>
+          <collectionProp name="UserParameters.thread_values">
+            <collectionProp name="1512947723">
+              <stringProp name="-2050349515">192.168.2.176</stringProp>
+              <stringProp name="46730162">10001</stringProp>
+              <stringProp name="-822227100">xuhuilin@orvibo.com</stringProp>
+              <stringProp name="1264603118">25F9E794323B453885F5181F1B624D0B</stringProp>
+              <stringProp name="-1151088949">5cffffe200b2</stringProp>
+              <stringProp name="1938846470">5ccf7f140597</stringProp>
+              <stringProp name="-259090153">6001940af5de</stringProp>
+              <stringProp name="-791052597">2c3ae804b8ba</stringProp>
+              <stringProp name="-854211441">5ccf7fda9182</stringProp>
+              <stringProp name="-1777990346">${__time(/1000,)}</stringProp>
+              <stringProp name="-487738474">4a38516a835e48bd9e407ec08b6dd566</stringProp>
+              <stringProp name="1822166522">4d42d46640e64512bd50df2dc1699e32</stringProp>
+              <stringProp name="-965770079">b32eeb02189449d5b5c67023a6c894bc</stringProp>
+              <stringProp name="947044194">aede78b00d4e40a8821e16299c35e7ec</stringProp>
+              <stringProp name="-152710438">b78d1bc5199346f0a13255ed399f3714</stringProp>
+              <stringProp name="-150151240">0017e9e4c41f4f62a4a6dea6a414e91d</stringProp>
+              <stringProp name="1359307876">83abfadec91744b39d1b6137677e9af3</stringProp>
+              <stringProp name="410494098">f2e10a56f71b4518b0d09aef20d89baa</stringProp>
+              <stringProp name="2144355136">9d9415a523fe469888c071cbca4919c3</stringProp>
+            </collectionProp>
+            <collectionProp name="1119597219">
+              <stringProp name="0"></stringProp>
+              <stringProp name="0"></stringProp>
+              <stringProp name="0"></stringProp>
+              <stringProp name="0"></stringProp>
+              <stringProp name="-1636560506">ember主机</stringProp>
+              <stringProp name="756618">小方</stringProp>
+              <stringProp name="-1414871771">allone</stringProp>
+              <stringProp name="-1944559833">插座S20C</stringProp>
+              <stringProp name="-1448201029">插座S30</stringProp>
+              <stringProp name="0"></stringProp>
+              <stringProp name="853402398">小方的设备id</stringProp>
+              <stringProp name="1062826595">allone的设备id</stringProp>
+              <stringProp name="-1436077488">红外转发器的id</stringProp>
+              <stringProp name="-2059534206">s20c插座id</stringProp>
+              <stringProp name="-1357621536">S30插座id</stringProp>
+              <stringProp name="-1637956012">异常场景的id</stringProp>
+              <stringProp name="995112558">智能遥控器1</stringProp>
+              <stringProp name="995112559">智能遥控器2</stringProp>
+              <stringProp name="764440615">情景面板</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <boolProp name="UserParameters.per_iteration">false</boolProp>
+        </UserParameters>
+        <hashTree/>
+        <ConfigTestElement guiclass="org.apache.jmeter.protocol.tcp.config.gui.TCP4HomemateConfigGui" testclass="ConfigTestElement" testname="TCP智家365取样器配置" enabled="true">
+          <stringProp name="TCPSampler.server">${ip}</stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port">${port}</stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout">35000</stringProp>
+          <stringProp name="TCPSampler.request"></stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${SessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">true</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">2.5.0</stringProp>
+          <stringProp name="TCPSampler.classname">com.orvibo.test.sampler.HMTCPClientImpl</stringProp>
+          <stringProp name="TCPSampler.soLinger">0</stringProp>
+          <stringProp name="TCPSampler.EolByte">1000</stringProp>
+          <stringProp name="TCPSampler.ctimeout">5000</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="checkQuery">Select 1</stringProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://192.168.2.248:3306/vihome_cloud?useUnicode=true&amp;charset=UTF- 8</stringProp>
+          <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="password">orvibo888</stringProp>
+          <stringProp name="poolMax">10</stringProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <stringProp name="username">root</stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timingGroup的S20的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timingGroup SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;2c3ae804b8ba&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timing的S20的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timing SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;2c3ae804b8ba&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timingGroup的S30的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timingGroup SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;5ccf7fda9182&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timing的S30的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timingGroup SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;5ccf7fda9182&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="模式定时—申请通信密钥" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">true</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;softwareVersion&quot;:&quot;64&quot;,&quot;cmd&quot;:0,&quot;language&quot;:&quot;chinese&quot;,&quot;source&quot;:&quot;ZhiJia365&quot;,&quot;sysVersion&quot;:&quot;ios10.2.1&quot;,&quot;hardwareVersion&quot;:&quot;iphone6&quot;}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.soLinger">0</stringProp>
+          <stringProp name="TCPSampler.EolByte">10001</stringProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">true</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="SessionId - JSON Path Extractor" enabled="true">
+            <stringProp name="VAR">SessionId</stringProp>
+            <stringProp name="JSONPATH">$.SessionId</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="dkey - JSON Path Extractor" enabled="true">
+            <stringProp name="VAR">dkey</stringProp>
+            <stringProp name="JSONPATH">$.payload.key</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="模式定时—用户登录" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:2,&quot;userName&quot;:&quot;${userName}&quot;,&quot;password&quot;:&quot;${password}&quot;,&quot;type&quot;:3}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="新增模式定时" enabled="true"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-不带电量统计" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId" enabled="true">
+              <stringProp name="VAR">timingGroupId</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-不带电量统计" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:134,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20修改&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;timingId&quot;:&quot;${timingId_t1}&quot;,&quot;order&quot;:&quot;off&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:17,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1,&quot;freq&quot;:-1,&quot;pluseNum&quot;:-1,&quot;pluseData&quot;:-1},{&quot;timingType&quot;:1,&quot;timingId&quot;:&quot;${timingId_t2}&quot;,&quot;order&quot;:&quot;off&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:19,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2,&quot;freq&quot;:-1,&quot;pluseNum&quot;:-1,&quot;pluseData&quot;:-1}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_xg" enabled="true">
+              <stringProp name="VAR">timingGroupId_xg</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—不带电量统计" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_xg}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-带电量统计(定时周一单次）" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S30}&quot;,&quot;name&quot;:&quot;S30模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_S30}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S30模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:00,&quot;second&quot;:01,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S30模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:02,&quot;second&quot;:15,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_s30" enabled="true">
+              <stringProp name="VAR">timingGroupId_s30</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时_带电量统计" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_s30}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="增加模式定时名字、时间逻辑判断" enabled="true"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-名称带有特殊字符单次周五执行" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式￥%#@定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:144,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式￥%#@定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:2,&quot;second&quot;:15,&quot;week&quot;:144,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_n1" enabled="true">
+              <stringProp name="VAR">timingGroupId_n1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—名称带有特殊字符" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_n1}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-名称超长" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;深圳市南山区智园A7栋欧瑞博电子有限公司深圳市南山区智园A7栋欧瑞博电子有限公司&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;深圳市南山区智园A7栋欧瑞博电子有限公司深圳市南山区智园A7栋欧瑞博电子有限公司&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:160,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;深圳市南山区智园A7栋欧瑞博电子有限公司深圳市南山区智园A7栋欧瑞博电子有限公司&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:2,&quot;second&quot;:15,&quot;week&quot;:160,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_n2" enabled="true">
+              <stringProp name="VAR">timingGroupId_n2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—名称超长" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_n2}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-开始时间大于关闭时间" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:15,&quot;minute&quot;:2,&quot;second&quot;:15,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_n3" enabled="true">
+              <stringProp name="VAR">timingGroupId_n3</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—开始时间大于关闭时间" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_n3}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-开始时间等于关闭时间" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-855488141">&quot;status&quot;: 65</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-重复的定时任务" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:2,&quot;second&quot;:15,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-855488140">&quot;status&quot;: 66</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="模式定时执行周期判断" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">8</stringProp>
+        </LoopController>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-${caseName}" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:${week},&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:${week},&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="delimiter">,</stringProp>
+              <stringProp name="fileEncoding">utf8</stringProp>
+              <stringProp name="filename">../data/模式定时执行周期.csv</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <stringProp name="shareMode">shareMode.thread</stringProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="variableNames">caseName,week</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_zq" enabled="true">
+              <stringProp name="VAR">timingGroupId_zq</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—${caseName}" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_zq}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timingGroup的S20的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timingGroup SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;2c3ae804b8ba&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timing的S20的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timing SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;2c3ae804b8ba&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timingGroup的S30的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timingGroup SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;5ccf7fda9182&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="删除数据库中表timing的S30的模式定时数据" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE timingGroup SET delFlag =1,UpdateTime = NOW() WHERE uid = &quot;5ccf7fda9182&quot; AND delFlag =0
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="激活模式定时" enabled="true"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-激活模式定时" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_jh" enabled="true">
+              <stringProp name="VAR">timingGroupId_jh</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活模式定时-模式定时生效" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:136,&quot;timingGroupId&quot;:&quot;${timingGroupId_jh}&quot;,&quot;isPause&quot;:1}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活模式定时-模式定时不生效" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:136,&quot;timingGroupId&quot;:&quot;${timingGroupId_jh}&quot;,&quot;isPause&quot;:0}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活模式定时-timingGroupId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:136,&quot;timingGroupId&quot;:&quot;&quot;,&quot;isPause&quot;:1}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活模式定时-isPause为null" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:136,&quot;timingGroupId&quot;:&quot;${timingGroupId}&quot;,&quot;isPause&quot;:null}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-748535509">response is null or response length less 4.</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="新增模式定时异常场景" enabled="true"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-uid和deviceid不匹配" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId}&quot;,&quot;name&quot;:&quot;&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_y3" enabled="true">
+              <stringProp name="VAR">timingGroupId_y3</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—uid和deviceid不匹配" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y3}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-timingType参数异常" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_y5" enabled="true">
+              <stringProp name="VAR">timingGroupId_y5</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingType参数异常" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y5}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-deviceid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_y1" enabled="true">
+              <stringProp name="VAR">timingGroupId_y1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—deviceid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y1}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-uid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_y2" enabled="true">
+              <stringProp name="VAR">timingGroupId_y2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—uid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y2}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-name为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_y4" enabled="true">
+              <stringProp name="VAR">timingGroupId_y4</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—name为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y4}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-order为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:-1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:-1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_y6" enabled="true">
+              <stringProp name="VAR">timingGroupId_y6</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_t1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_t2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—order为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y6}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="修改模式定时异常场景" enabled="true"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-不带电量统计" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_yxgt1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_yxgt2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-uid和deviceid不匹配" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId}&quot;,&quot;name&quot;:&quot;S20模式定时test&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时test&quot;,&quot;order&quot;:&quot;on&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时test&quot;,&quot;order&quot;:&quot;on&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg2" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—uid和deviceid不匹配" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg2}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-deviceid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg1" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—deviceid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg1}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-uid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg2" enabled="false">
+              <stringProp name="VAR">timingGroupId_yxg2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-name为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg3" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg3</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—name为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_y6}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-order为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg4" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg4</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—order为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg4}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-timingType参数异常" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:-1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:-1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg5" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg5</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingType参数异常" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg5}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-timingGroupId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt1}&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;${timingId_yxgt2}&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg6" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg6</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingGroupId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg6}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-timingId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg}&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg7" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg7</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg7}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改模式定时-timingGroupId和timingId同时为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingId&quot;:&quot;&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_yxg8" enabled="true">
+              <stringProp name="VAR">timingGroupId_yxg8</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingGroupId和timingId同时为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_yxg8}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="删除模式定时异常场景" enabled="true"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="增加模式定时-不带电量统计" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:133,&quot;timingGroup&quot;:{&quot;deviceId&quot;:&quot;${deviceId_S20C}&quot;,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;timingGroupId&quot;:&quot;&quot;,&quot;uid&quot;:&quot;${uid_s20c}&quot;},&quot;timingList&quot;:[{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:18,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:1},{&quot;timingType&quot;:1,&quot;name&quot;:&quot;S20模式定时&quot;,&quot;order&quot;:&quot;on&quot;,&quot;value1&quot;:0,&quot;value2&quot;:0,&quot;value3&quot;:0,&quot;value4&quot;:0,&quot;hour&quot;:20,&quot;minute&quot;:0,&quot;second&quot;:1,&quot;week&quot;:129,&quot;showIndex&quot;:2}]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_del" enabled="true">
+              <stringProp name="VAR">timingGroupId_del</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t1" enabled="true">
+              <stringProp name="VAR">timingId_yxgt1</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[0].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId_t2" enabled="true">
+              <stringProp name="VAR">timingId_yxgt2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingList[1].timingId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingGroupId异常" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;12365545562&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingGroupId" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_del}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingGroupId_del2" enabled="true">
+              <stringProp name="VAR">timingGroupId_del2</stringProp>
+              <stringProp name="JSONPATH">$.payload.timingGroup.timingGroupId</stringProp>
+              <stringProp name="DEFAULT">notfound</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—删除已被删除的模式定时" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;${timingGroupId_del2}&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除模式定时—timingGroupId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:135,&quot;timingGroupId&quot;:&quot;&quot;}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-720333059">&quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,5 @@
+testcase_invite,userName_invite,familyId_invite,assertion_invite
+正常,userName_admin,familyId_1,0
+userName为登录用户,userName,familyId_1,32
+userName未注册,userName_nonexist,familyId_1,31
+familyId无关联,userName_admin,familyId_other_1,1

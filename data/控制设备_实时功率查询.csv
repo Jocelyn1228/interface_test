@@ -1,0 +1,7 @@
+caseName,uid,deviceId,resultAssert
+【控制设备：实时功率查询】S30M设备：正常流程,5ccf7fda9182,b78d1bc5199346f0a13255ed399f3714,"""status"": 0"
+【控制设备：实时功率查询】必填项为空,null,null,response is null or response length less 4
+【控制设备：实时功率查询】uid为空,null,b78d1bc5199346f0a13255ed399f3714,response is null or response length less 4
+【控制设备：实时功率查询】deviceId为空,5ccf7fda9182,null,response is null or response length less 4
+【控制设备：实时功率查询】uid和deviceId不是绑定关系,007e56121212,b78d1bc5199346f0a13255ed399f3714,"""status"": 30"
+【控制设备：实时功率查询】deviceId不存在,5ccf7fda9182,994af95626fb4852b3f1d818ee&&&00@,"""status"": 0"

@@ -1,0 +1,11 @@
+caseName,type,deviceId,ispush,statusNum
+【定时推送设置】对所有设备进行推送,0,,0,0
+【定时推送设置】对所有设备不推送,0,,1,0
+【定时推送设置】对单个设备进行推送,1,6dae91316ecc4ff8befe0a5236e6c26b,0,0
+【定时推送设置】对单个设备不推送,1,6dae91316ecc4ff8befe0a5236e6c26b,1,0
+【定时推送设置】必填项为空,null,null,null,error
+【定时推送设置】type为null,null,31901a2ff73843a89507796e6c113f72,0,error
+【定时推送设置】对单个设备发消息时，deviceId为null,1,,0,1
+【定时推送设置】isPush为null,0,,null,error
+【定时推送设置】type值不合理,3,31901a2ff73843a89507796e6c113f72,1,1
+【定时推送设置】isPush值不合理,0,,5,0

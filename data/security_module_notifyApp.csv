@@ -1,0 +1,5 @@
+testcase_notifyApp,securityId_notifyApp,assertion_notifyApp
+在家安防,securityId_home_1,0
+外出安防,securityId_away_1,0
+securityId空字符串,emptyStr,1
+securityId非当前用户,securityId_other_1,1

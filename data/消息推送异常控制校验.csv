@@ -1,0 +1,11 @@
+casename,uid,deviceId,type,isPush,startTime,endTime,week,assertion
+type为空,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,null,0,15:00:00,23:00:00,255,response is null
+type为-1,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,-1,0,15:00:00,23:00:00,255,"""status"": 1"
+isPush为空,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,3,null,15:00:00,23:00:00,255,response is null
+ispush为-1,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,3,-1,15:00:00,23:00:00,255,"""status"": 1"
+startTime为空,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,3,0,null,23:00:00,255,response is null
+endTime为空,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,3,0,15:00:00,null,255,response is null
+week为空,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,3,0,15:00:00,23:00:00,null,response is null
+week为-1,5cffffe200b2,5d0a45ee82d74d23ad5dfa189132a4c1,3,0,15:00:00,23:00:00,-1,"""status"": 1"
+uid为空,null,5d0a45ee82d74d23ad5dfa189132a4c1,3,0,15:00:00,23:00:00,255,"""status"": 1"
+deviceId为空,5cffffe200b2,null,3,0,15:00:00,23:00:00,255,response is null

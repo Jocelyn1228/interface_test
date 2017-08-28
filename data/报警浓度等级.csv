@@ -1,0 +1,5 @@
+casename,alarmLevel,assertion
+设置报警浓度为0,0,"""status"": 0"
+设置报警浓度为1,1,"""status"": 0"
+设置报警浓度为2,2,"""status"": 0"
+设置报警浓度为3,3,"""status"": 0"

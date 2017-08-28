@@ -1,0 +1,13 @@
+userName为空,,5cffffe200b2,on,0,12,14,12,129,5月12日,5月13日, "status": 1
+userName内容异常,13510951447,5cffffe200b2,on,0,12,14,12,129,5月12日,5月13日,response is null
+uid为空,xuhuilin@orvibo.com,,on,0,12,14,12,129,5月12日,5月13日,response is null
+order字段为空,xuhuilin@orvibo.com,5cffffe200b2,,0,12,14,12,129,5月12日,5月13日,response is null
+value1字段为空,xuhuilin@orvibo.com,5cffffe200b2,on,null,12,14,12,129,5月12日,5月13日,response is null
+时字段为空,xuhuilin@orvibo.com,5cffffe200b2,on,0,null,14,12,129,5月12日,5月13日,response is null
+分字段为空,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,null,12,129,5月12日,5月13日,response is null
+秒字段为空,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,14,null,129,5月12日,5月13日,response is null
+执行周期为空,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,14,12,null,5月12日,5月13日,response is null
+startDate为空,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,14,12,129,,5月13日,response is null
+endDate为空,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,14,12,129,5月12日,,response is null
+startDate字段大于endDate,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,14,12,129,5月13日,5月12日,response is null
+startDate字段等于endDate,xuhuilin@orvibo.com,5cffffe200b2,on,0,12,14,12,129,5月12日,5月12日,response is null

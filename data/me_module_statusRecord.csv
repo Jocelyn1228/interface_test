@@ -1,0 +1,6 @@
+testcase_statusRecord,deviceId_statusRecord,uid_statusRecord,minSequence_statusRecord,maxSequence_statusRecord,readCount_statusRecord,assertion_statusRecord
+正常(CO报警器),31901a2ff73843a89507796e6c113f72,5cffffe200b2,-1,-1,20,0
+deviceId不属于当前用户,5bd2ffcb20454597a92e8a5296aad444,5cffffe200b2,-1,-1,20,30
+uid不属于当前用户,31901a2ff73843a89507796e6c113f72,5ccf7f0a0a69,-1,-1,20,30
+uid非主机,31901a2ff73843a89507796e6c113f72,6001940af596,-1,-1,20,1
+readCount等于51,31901a2ff73843a89507796e6c113f72,5cffffe200b2,-1,-1,51,1

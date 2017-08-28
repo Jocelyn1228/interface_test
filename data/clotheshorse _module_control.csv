@@ -1,0 +1,16 @@
+testcase_control,userName_control,uid_control,deviceId_control,type_control,order_control,assertion_control
+总控开,userName,clothhorse_uid,clothhorse_deviceId_1,mainSwitchCtrl,on,0
+电机开,userName,clothhorse_uid,clothhorse_deviceId_1,motorCtrl,up,0
+电机关,userName,clothhorse_uid,clothhorse_deviceId_1,motorCtrl,down,0
+电机停,userName,clothhorse_uid,clothhorse_deviceId_1,motorCtrl,stop,0
+照明开,userName,clothhorse_uid,clothhorse_deviceId_1,lightingCtrl,on,0
+照明关,userName,clothhorse_uid,clothhorse_deviceId_1,lightingCtrl,off,0
+消毒开,userName,clothhorse_uid,clothhorse_deviceId_1,sterilizingCtrl,on,0
+消毒关,userName,clothhorse_uid,clothhorse_deviceId_1,sterilizingCtrl,off,0
+烘干开,userName,clothhorse_uid,clothhorse_deviceId_1,heatDryingCtrl,on,0
+烘干关,userName,clothhorse_uid,clothhorse_deviceId_1,heatDryingCtrl,off,0
+风干干,userName,clothhorse_uid,clothhorse_deviceId_1,windDryingCtrl,on,0
+风干关,userName,clothhorse_uid,clothhorse_deviceId_1,windDryingCtrl,off,0
+查询开,userName,clothhorse_uid,clothhorse_deviceId_1,queryState,on,0
+总控关,userName,clothhorse_uid,clothhorse_deviceId_1,mainSwitchCtrl,off,0
+uid空字符串,userName,emptyStr,clothhorse_deviceId_1,mainSwitchCtrl,off,30

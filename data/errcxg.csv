@@ -1,0 +1,7 @@
+userName字段为空,,5ccf7fda9182,on,0,3,"""status"": 1"
+uid字段为空,xuhuilin@orvibo.com,,on,0,4,"""status"": 30"
+order为空,xuhuilin@orvibo.com,5ccf7fda9182,,0,5,"""status"": 1"
+uid为错误数值,xuhuilin@orvibo.com,5cffffe200b2,on,0,6,"""status"": 1"
+time值为180,xuhuilin@orvibo.com,5ccf7fda9182,on,0,180,"""status"": 1"
+time值为0,xuhuilin@orvibo.com,5ccf7fda9182,on,0,0,"""status"": 1"
+order和value1的值为错误数值,xuhuilin@orvibo.com,5ccf7fda9182,rf control,380000,25,"""status"": 1"

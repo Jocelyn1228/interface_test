@@ -1,0 +1,18 @@
+casename,uid2,assertion
+allone空调,6001940af5de,"""status"": 0"
+allone风扇,6001940af5de,"""status"": 0"
+allone音响,6001940af5de,,"""status"": 0"
+allone机顶盒遥控器,6001940af5de,"""status"": 0"
+allone电视遥控器,6001940af5de,"""status"": 0"
+allone电视盒子遥控器,6001940af5de,"""status"": 0"
+allone投影仪遥控器,6001940af5de,"""status"": 0"
+小方空调,5ccf7f140597,"""status"": 0"
+小方风扇,5ccf7f140597,"""status"": 0"
+小方音响,5ccf7f140597,"""status"": 0"
+小方机顶盒,5ccf7f140597,"""status"": 0"
+小方电视遥控器,5ccf7f140597,"""status"": 0"
+小方电视盒子,5ccf7f140597,"""status"": 0"
+小方投影仪,5ccf7f140597,"""status"": 0"
+小方自定义,5ccf7f140597,"""status"": 0"
+
+

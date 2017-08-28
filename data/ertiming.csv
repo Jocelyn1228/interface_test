@@ -1,0 +1,11 @@
+s20创建定时uid与设备非绑定关系,xuhuilin@orvibo.com,5cffffe200b2,开,aede78b00d4e40a8821e16299c35e7ec,on,0,0,0,0,15,59,0,0,0,"""status"": 1"
+s20创建定时hour字段为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,0,90,0,0,null,14,45,0,0,response is null
+s20创建定时minute字段为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,0,80,0,0,10,null,7,0,0,response is null
+s20创建定时second为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,0,100,347,0,23,15,null,0,0,response is null
+s20创建定时week字段为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,0,0,0,0,15,18,0,null,0,response is null
+s20创建定时typetime为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,0,0,0,0,14,44,0,0,null,response is null
+s20创建定时userName为空,,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,0,0,0,0,15,59,0,0,0,"""status"": 1"
+s20创建定时uid字段为空,xuhuilin@orvibo.com,,开,aede78b00d4e40a8821e16299c35e7ec,on,0,0,0,0,15,59,0,0,0,"""status"": 1"
+s20创建定时deviceId字段为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,,on,0,0,0,0,15,59,0,0,0,"""status"": 1"
+s20创建定时order字段为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,,0,0,0,0,15,59,0,0,0,"""status"": 1"
+s20创建定时value1值为空,xuhuilin@orvibo.com,2c3ae804b8ba,开,aede78b00d4e40a8821e16299c35e7ec,on,null,0,0,0,15,59,0,0,0,"""status"": 1"

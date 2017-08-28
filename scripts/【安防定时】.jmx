@@ -1,0 +1,2775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <longProp name="ThreadGroup.start_time">1495434823000</longProp>
+        <longProp name="ThreadGroup.end_time">1495434823000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="common_module" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF8</stringProp>
+          <stringProp name="filename">../data/common_module.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames"></stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <ConfigTestElement guiclass="org.apache.jmeter.protocol.tcp.config.gui.TCP4HomemateConfigGui" testclass="ConfigTestElement" testname="TCP智家365取样器配置" enabled="true">
+          <stringProp name="TCPSampler.server">${host}</stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port">${port}</stringProp>
+          <boolProp name="TCPSampler.nodelay">true</boolProp>
+          <stringProp name="TCPSampler.timeout">${response_timeout}</stringProp>
+          <stringProp name="TCPSampler.request"></stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${SessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">true</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="TCPSampler.classname">com.orvibo.test.sampler.HMTCPClientImpl</stringProp>
+          <stringProp name="TCPSampler.soLinger">0</stringProp>
+          <stringProp name="TCPSampler.EolByte">1000</stringProp>
+          <stringProp name="TCPSampler.ctimeout">${connect_timeout}</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+          <stringProp name="dataSource">pool</stringProp>
+          <stringProp name="poolMax">10</stringProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="checkQuery">Select 1</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://192.168.2.176:3306/vihome_cloud??useUnicode=true&amp;characterEncoding=utf8</stringProp>
+          <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+          <stringProp name="username">root</stringProp>
+          <stringProp name="password">orvibo888</stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="【安防和情景定时】申请通信密钥" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">true</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;softwareVersion&quot;:${softwareVersion},&quot;cmd&quot;:0,&quot;language&quot;:&quot;chinese&quot;,&quot;source&quot;:&quot;${source}&quot;,&quot;sysVersion&quot;:&quot;${sysVersion}&quot;,&quot;hardwareVersion&quot;:&quot;${hardwareVersion}&quot;}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.soLinger">0</stringProp>
+          <stringProp name="TCPSampler.EolByte">10001</stringProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">true</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="SessionId - JSON Path Extractor" enabled="true">
+            <stringProp name="VAR">SessionId</stringProp>
+            <stringProp name="JSONPATH">$.SessionId</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="dkey - JSON Path Extractor" enabled="true">
+            <stringProp name="VAR">dkey</stringProp>
+            <stringProp name="JSONPATH">$.payload.key</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="申请通信密钥成功" enabled="true">
+          <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="【安防和情景定时】用户登录" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:2,&quot;userName&quot;:&quot;${userName}&quot;,&quot;password&quot;:&quot;${password}&quot;,&quot;type&quot;:3}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${SessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.payload.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">0</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">true</boolProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="用户登录成功" enabled="true">
+            <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="userId_1查询" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">select userId from account2 where email = &quot;${userName}&quot; and delFlag = 0;</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">userId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+              <stringProp name="resultSetHandler">Store as String</stringProp>
+            </JDBCSampler>
+            <hashTree>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="familyId_default_1-默认家庭" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select familyId from userGatewayBind where uid = &quot;${uid}&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">familyId_default</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="familyId_other_1-其他" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select familyId from security where familyId != &quot;${familyId_default_1}&quot; and name = &quot;外出安防&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">familyId_other</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="securityId_home_1-在家安防" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select securityId from security where familyId = &quot;${familyId_default_1}&quot; and name = &quot;在家安防&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">securityId_home</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="securityId_away_1-外出安防" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select securityId from security where familyId = &quot;${familyId_default_1}&quot; and name = &quot;外出安防&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">securityId_away</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="securityId_other_1-其他" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select securityId from security where familyId != &quot;${familyId_default_1}&quot; and name = &quot;外出安防&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">securityId_other</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="sceneId_system_1-系统" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select sceneNo from scene where familyId = &quot;${familyId_default_1}&quot; and sceneName = &quot;灯光全开&quot; and delFlag = 0;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">sceneId_system</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="sceneId_custom_1-自定义" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select sceneNo from scene where familyId = &quot;${familyId_default_1}&quot; and sceneName = &quot;情景&quot; and delFlag = 0;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">sceneId_custom</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="sceneId_other_1-其他" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select sceneNo from scene where familyId != &quot;${familyId_default_1}&quot; and sceneName = &quot;灯光全开&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">sceneId_other</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="power_deviceId_1-配电箱deviceId查询" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select deviceId from device where extAddr = &quot;${power_extAddr}&quot; and delFlag = 0 limit 1;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">power_deviceId</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+              <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="power_bind_1-绑定配电箱数量" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="query">select deviceId from device where extAddr = &quot;${power_extAddr}&quot; and gatewayUID = &quot;${miniHub_uid}&quot; and endpoint = 1 and delFlag = 0;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="resultSetHandler">Store as String</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="variableNames">power_bind</stringProp>
+              </JDBCPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="新布撤防接口-循环控制器" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">10</stringProp>
+            </LoopController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="新布撤防接口-${testcase_set}" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 117,
+    &quot;userName&quot;: &quot;${__evalVar(${userName_set})}&quot;,
+    &quot;familyId&quot;:&quot;${__evalVar(${FamilyId_set})}&quot;,
+    &quot;securityId&quot;:&quot;${__evalVar(${securityId_set})}&quot;,
+    &quot;isArm&quot;:${isArm_set},
+    &quot;checkoutOnline&quot;:${checkoutOnline_set},
+    &quot;delay&quot;:${delay_set}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="security_module_set" enabled="true">
+                  <stringProp name="filename">../data/security_module_set.csv</stringProp>
+                  <stringProp name="fileEncoding">gbk</stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <stringProp name="delimiter">,</stringProp>
+                  <boolProp name="quotedData">false</boolProp>
+                  <boolProp name="recycle">true</boolProp>
+                  <boolProp name="stopThread">false</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">${assertion_set}</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="创建安防和情景定时-清空timingId" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="query">select timingId from timing where uid = &quot;${familyId_default_1}&quot; and delFlag = 0;</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="resultSetHandler">Store as String</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="variableNames">timingIdList</stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="创建安防和情景定时查询成功" enabled="true">
+              <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="创建安防和情景定时-批量删除" enabled="true">
+                <stringProp name="ForeachController.inputVal">timingIdList</stringProp>
+                <stringProp name="ForeachController.returnVal">timingIdDel</stringProp>
+                <boolProp name="ForeachController.useSeparator">true</boolProp>
+              </ForeachController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-正常删除" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingIdDel}&quot;,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="创建安防和情景定时-循环控制器" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">25</stringProp>
+            </LoopController>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="security_module_timing" enabled="true">
+                <stringProp name="filename">../data/security_module_timing.csv</stringProp>
+                <stringProp name="fileEncoding">gbk</stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <stringProp name="delimiter">,</stringProp>
+                <boolProp name="quotedData">false</boolProp>
+                <boolProp name="recycle">false</boolProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="shareMode">shareMode.all</stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建安防和情景定时-${testcase_timing}" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 210,
+    &quot;userName&quot;: &quot;${__evalVar(${userName_timing})}&quot;,
+    &quot;uid&quot;:&quot;${__evalVar(${uid_timing})}&quot;,
+    &quot;deviceId&quot;:&quot;${__evalVar(${deviceId_timing})}&quot;,
+    &quot;order&quot;:&quot;${order_timing}&quot;,
+    &quot;hour&quot;:${hour_timing},
+    &quot;minute&quot;:${minute_timing},
+    &quot;second&quot;:0,
+    &quot;week&quot;:${week_timing},
+    &quot;timingType&quot;:${timingType_timing},
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId - JSON Path Extractor" enabled="true">
+                  <stringProp name="VAR">timingId</stringProp>
+                  <stringProp name="JSONPATH">$.payload.timingId</stringProp>
+                  <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                  <stringProp name="VARIABLE"></stringProp>
+                  <stringProp name="SUBJECT">BODY</stringProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">${assertion_timing}</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="创建安防和情景定时创建成功" enabled="true">
+                <stringProp name="IfController.condition">${__groovy(&quot;${timingId}&quot; != &quot;NOTFOUND&quot;)}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活安防和情景定时-${testcase_timing}" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 213,
+    &quot;userName&quot;: &quot;${__evalVar(${userName_timing})}&quot;,
+    &quot;uid&quot;:&quot;${__evalVar(${uid_timing})}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;isPause&quot;:${__Random(0,1,)},
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">${assertion_timing}</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改安防和情景定时-${testcase_timing}" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 211,
+    &quot;userName&quot;: &quot;${__evalVar(${userName_timing})}&quot;,
+    &quot;uid&quot;:&quot;${__evalVar(${uid_timing})}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;order&quot;:&quot;${order_timing}&quot;,
+    &quot;hour&quot;:${__Random(0,23,)},
+    &quot;minute&quot;:${__Random(0,59,)},
+    &quot;second&quot;:0,
+    &quot;week&quot;:${__Random(0,255,)},
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0    
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">${assertion_timing}</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-${testcase_timing}" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${__evalVar(${userName_timing})}&quot;,
+    &quot;uid&quot;:&quot;${__evalVar(${uid_timing})}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)},
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">${assertion_timing}</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建安防和情景定时-正常" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 210,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;deviceId&quot;:&quot;${sceneId_system_1}&quot;,
+    &quot;order&quot;:&quot;scene control&quot;,
+    &quot;hour&quot;:0,
+    &quot;minute&quot;:0,
+    &quot;second&quot;:0,
+    &quot;week&quot;:0,
+    &quot;timingType&quot;:3,
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId - JSON Path Extractor" enabled="true">
+                <stringProp name="VAR">timingId</stringProp>
+                <stringProp name="JSONPATH">$.payload.timingId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                <stringProp name="EXPECTED_VALUE">0</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">true</boolProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="创建安防和情景定时创建成功" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(&quot;${timingId}&quot; != &quot;NOTFOUND&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建安防和情景定时-存在激活的重复定时" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 210,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;deviceId&quot;:&quot;${sceneId_system_1}&quot;,
+    &quot;order&quot;:&quot;scene control&quot;,
+    &quot;hour&quot;:0,
+    &quot;minute&quot;:0,
+    &quot;second&quot;:0,
+    &quot;week&quot;:0,
+    &quot;timingType&quot;:3,
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">38</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活安防和情景定时-uid为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 213,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:null,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;isPause&quot;:${__Random(0,1,)},
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活安防和情景定时-timingId为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 213,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:null,
+    &quot;isPause&quot;:${__Random(0,1,)},
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活安防和情景定时-isPause为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 213,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;isPause&quot;:null,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="激活安防和情景定时-laseUpdateTime为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 213,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;isPause&quot;:${__Random(0,1,)},
+    &quot;laseUpdateTime&quot;:null
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改安防和情景定时-uid为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 211,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:null,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;order&quot;:&quot;scene control&quot;,
+    &quot;hour&quot;:${__Random(0,23,)},
+    &quot;minute&quot;:${__Random(0,59,)},
+    &quot;second&quot;:0,
+    &quot;week&quot;:${__Random(0,255,)},
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0    
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改安防和情景定时-timingId为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 211,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:null,
+    &quot;order&quot;:&quot;scene control&quot;,
+    &quot;hour&quot;:${__Random(0,23,)},
+    &quot;minute&quot;:${__Random(0,59,)},
+    &quot;second&quot;:0,
+    &quot;week&quot;:${__Random(0,255,)},
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0    
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改安防和情景定时-order为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 211,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;order&quot;:null,
+    &quot;hour&quot;:${__Random(0,23,)},
+    &quot;minute&quot;:${__Random(0,59,)},
+    &quot;second&quot;:0,
+    &quot;week&quot;:${__Random(0,255,)},
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0    
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-uid为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:null,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-timingId为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:null,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-laseUpdateTime为null" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;laseUpdateTime&quot;:null
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1215614498">response is null</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-正常删除" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">0</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="正常删除成功" enabled="true">
+                <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-重复删除" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">true</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建安防和情景定时-deviceId为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 210,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;deviceId&quot;:null,
+    &quot;order&quot;:&quot;scene control&quot;,
+    &quot;hour&quot;:0,
+    &quot;minute&quot;:0,
+    &quot;second&quot;:0,
+    &quot;week&quot;:0,
+    &quot;timingType&quot;:3,
+    &quot;value1&quot;:0,
+    &quot;value2&quot;:0,
+    &quot;value3&quot;:0,
+    &quot;value4&quot;:0
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="timingId - JSON Path Extractor" enabled="true">
+                <stringProp name="VAR">timingId</stringProp>
+                <stringProp name="JSONPATH">$.payload.timingId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="创建安防和情景定时创建成功" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(&quot;${timingId}&quot; != &quot;NOTFOUND&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除安防和情景定时-正常删除" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 212,
+    &quot;userName&quot;: &quot;${userName}&quot;,
+    &quot;uid&quot;:&quot;${familyId_default_1}&quot;,
+    &quot;timingId&quot;:&quot;${timingId}&quot;,
+    &quot;laseUpdateTime&quot;:${__time(/1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">0</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="设置安防提醒-仅App通知循环控制器" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">4</stringProp>
+            </LoopController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防App提醒-${testcase_notifyApp}" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${__evalVar(${securityId_notifyApp})}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="security_module_notifyApp" enabled="true">
+                  <stringProp name="filename">../data/security_module_notifyApp.csv</stringProp>
+                  <stringProp name="fileEncoding">gbk</stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <stringProp name="delimiter">,</stringProp>
+                  <boolProp name="quotedData">false</boolProp>
+                  <boolProp name="recycle">false</boolProp>
+                  <boolProp name="stopThread">false</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">${assertion_notifyApp}</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="设置安防提醒-清空warningMemberId" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="query">select warningMemberId from warningMember where secWarningId in (select secWarningId from securityWarning where userId = &quot;${userId_1}&quot; and delFlag = 0) and delFlag = 0;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="resultSetHandler">Store as String</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="variableNames">warningMemberList</stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-查询成功" enabled="true">
+              <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="设置安防提醒-批量删除" enabled="true">
+                <stringProp name="ForeachController.inputVal">warningMemberList</stringProp>
+                <stringProp name="ForeachController.returnVal">warningMemberId</stringProp>
+                <boolProp name="ForeachController.useSeparator">true</boolProp>
+              </ForeachController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-正常删除" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="设置安防提醒-App通知并电话提醒循环控制器" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">9</stringProp>
+            </LoopController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-${testcase_notifyAdd}" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${__evalVar(${securityId_notifyAdd})}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;${memberName_notifyAdd}&quot;,
+        &quot;memberPhone&quot;: &quot;${memberPhone_notifyAdd}&quot;,
+        &quot;memberSortNum&quot;:&quot;${memberSortNum_notifyAdd}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="security_module_notifyAdd" enabled="true">
+                  <stringProp name="filename">../data/security_module_notifyAdd.csv</stringProp>
+                  <stringProp name="fileEncoding">gbk</stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <stringProp name="delimiter">,</stringProp>
+                  <boolProp name="quotedData">false</boolProp>
+                  <boolProp name="recycle">false</boolProp>
+                  <boolProp name="stopThread">false</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="secWarnindId" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">secWarnindId</stringProp>
+                  <stringProp name="RegexExtractor.regex">&quot;secWarnindId&quot;: &quot;(.*?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="warningMemberId" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">warningMemberId</stringProp>
+                  <stringProp name="RegexExtractor.regex">&quot;warningMemberId&quot;: &quot;(.*?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">${assertion_notifyAdd}</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒成功" enabled="true">
+                <stringProp name="IfController.condition">${__jexl3(!&quot;${warningMemberId}&quot;.equals(&quot;NOTFOUND&quot;))}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <boolProp name="IfController.useExpression">true</boolProp>
+              </IfController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-正常删除" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${__evalVar(${securityId_notifyAdd})}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="设置安防提醒-最大上限" enabled="true"/>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-第一联系人" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13912345678&quot;,
+        &quot;memberPhone&quot;: &quot;13912345678&quot;,
+        &quot;memberSortNum&quot;:&quot;1&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="secWarnindId" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">secWarnindId</stringProp>
+                  <stringProp name="RegexExtractor.regex">&quot;secWarnindId&quot;: &quot;(.*?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="warningMemberId" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">warningMemberId</stringProp>
+                  <stringProp name="RegexExtractor.regex">&quot;warningMemberId&quot;: &quot;(.*?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <JDBCPreProcessor guiclass="TestBeanGUI" testclass="JDBCPreProcessor" testname="warningMemberId_other_1" enabled="true">
+                  <stringProp name="dataSource">pool</stringProp>
+                  <stringProp name="query">select warningMemberId from warningMember where secWarningId != &quot;${secWarnindId}&quot; and delFlag = 0 limit 1;</stringProp>
+                  <stringProp name="queryArguments"></stringProp>
+                  <stringProp name="queryArgumentsTypes"></stringProp>
+                  <stringProp name="queryTimeout"></stringProp>
+                  <stringProp name="queryType">Select Statement</stringProp>
+                  <stringProp name="resultSetHandler">Store as String</stringProp>
+                  <stringProp name="resultVariable"></stringProp>
+                  <stringProp name="variableNames">warningMemberId_other</stringProp>
+                </JDBCPreProcessor>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                  <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                  <stringProp name="EXPECTED_VALUE">0</stringProp>
+                  <boolProp name="JSONVALIDATION">true</boolProp>
+                  <boolProp name="EXPECT_NULL">false</boolProp>
+                  <boolProp name="INVERT">false</boolProp>
+                  <boolProp name="ISREGEX">true</boolProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">1000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-创建成功" enabled="true">
+                <stringProp name="IfController.condition">${__jexl3( !&quot;${warningMemberId}&quot;.equals(&quot;NOTFOUND&quot;))}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <boolProp name="IfController.useExpression">true</boolProp>
+              </IfController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-第二联系人" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13912345678&quot;,
+        &quot;memberPhone&quot;: &quot;13912345678&quot;,
+        &quot;memberSortNum&quot;:&quot;2&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                </hashTree>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-创建成功" enabled="true">
+                  <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                </IfController>
+                <hashTree>
+                  <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-第三联系人" enabled="true">
+                    <stringProp name="TCPSampler.server"></stringProp>
+                    <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                    <stringProp name="TCPSampler.port"></stringProp>
+                    <boolProp name="TCPSampler.nodelay">false</boolProp>
+                    <stringProp name="TCPSampler.timeout"></stringProp>
+                    <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13912345678&quot;,
+        &quot;memberPhone&quot;: &quot;13912345678&quot;,
+        &quot;memberSortNum&quot;:&quot;3&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                    <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                    <stringProp name="TCPSampler.sessionId"></stringProp>
+                    <boolProp name="TCPSampler.isPk">false</boolProp>
+                    <stringProp name="TCPSampler.dkey"></stringProp>
+                    <stringProp name="TCPSampler.version"></stringProp>
+                    <stringProp name="ConfigTestElement.username"></stringProp>
+                    <stringProp name="ConfigTestElement.password"></stringProp>
+                  </TCPSampler>
+                  <hashTree>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                      <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                      <stringProp name="EXPECTED_VALUE">0</stringProp>
+                      <boolProp name="JSONVALIDATION">true</boolProp>
+                      <boolProp name="EXPECT_NULL">false</boolProp>
+                      <boolProp name="INVERT">false</boolProp>
+                      <boolProp name="ISREGEX">true</boolProp>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                    <hashTree/>
+                    <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                      <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    </ConstantTimer>
+                    <hashTree/>
+                  </hashTree>
+                  <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-创建成功" enabled="true">
+                    <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+                    <boolProp name="IfController.evaluateAll">false</boolProp>
+                  </IfController>
+                  <hashTree>
+                    <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-第四联系人" enabled="true">
+                      <stringProp name="TCPSampler.server"></stringProp>
+                      <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                      <stringProp name="TCPSampler.port"></stringProp>
+                      <boolProp name="TCPSampler.nodelay">false</boolProp>
+                      <stringProp name="TCPSampler.timeout"></stringProp>
+                      <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13912345678&quot;,
+        &quot;memberPhone&quot;: &quot;13912345678&quot;,
+        &quot;memberSortNum&quot;:&quot;4&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                      <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                      <stringProp name="TCPSampler.sessionId"></stringProp>
+                      <boolProp name="TCPSampler.isPk">false</boolProp>
+                      <stringProp name="TCPSampler.dkey"></stringProp>
+                      <stringProp name="TCPSampler.version"></stringProp>
+                      <stringProp name="ConfigTestElement.username"></stringProp>
+                      <stringProp name="ConfigTestElement.password"></stringProp>
+                    </TCPSampler>
+                    <hashTree>
+                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                        <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                        <stringProp name="EXPECTED_VALUE">0</stringProp>
+                        <boolProp name="JSONVALIDATION">true</boolProp>
+                        <boolProp name="EXPECT_NULL">false</boolProp>
+                        <boolProp name="INVERT">false</boolProp>
+                        <boolProp name="ISREGEX">true</boolProp>
+                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                      <hashTree/>
+                      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                        <stringProp name="ConstantTimer.delay">1000</stringProp>
+                      </ConstantTimer>
+                      <hashTree/>
+                    </hashTree>
+                    <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-创建成功" enabled="true">
+                      <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+                      <boolProp name="IfController.evaluateAll">false</boolProp>
+                    </IfController>
+                    <hashTree>
+                      <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-第五联系人" enabled="true">
+                        <stringProp name="TCPSampler.server"></stringProp>
+                        <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                        <stringProp name="TCPSampler.port"></stringProp>
+                        <boolProp name="TCPSampler.nodelay">false</boolProp>
+                        <stringProp name="TCPSampler.timeout"></stringProp>
+                        <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13912345678&quot;,
+        &quot;memberPhone&quot;: &quot;13912345678&quot;,
+        &quot;memberSortNum&quot;:&quot;5&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                        <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                        <stringProp name="TCPSampler.sessionId"></stringProp>
+                        <boolProp name="TCPSampler.isPk">false</boolProp>
+                        <stringProp name="TCPSampler.dkey"></stringProp>
+                        <stringProp name="TCPSampler.version"></stringProp>
+                        <stringProp name="ConfigTestElement.username"></stringProp>
+                        <stringProp name="ConfigTestElement.password"></stringProp>
+                      </TCPSampler>
+                      <hashTree>
+                        <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                          <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                          <stringProp name="EXPECTED_VALUE">0</stringProp>
+                          <boolProp name="JSONVALIDATION">true</boolProp>
+                          <boolProp name="EXPECT_NULL">false</boolProp>
+                          <boolProp name="INVERT">false</boolProp>
+                          <boolProp name="ISREGEX">true</boolProp>
+                        </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                        <hashTree/>
+                        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                          <stringProp name="ConstantTimer.delay">1000</stringProp>
+                        </ConstantTimer>
+                        <hashTree/>
+                      </hashTree>
+                      <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-创建成功" enabled="true">
+                        <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+                        <boolProp name="IfController.evaluateAll">false</boolProp>
+                      </IfController>
+                      <hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒新增-超出上限" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13912345678&quot;,
+        &quot;memberPhone&quot;: &quot;13912345678&quot;,
+        &quot;memberSortNum&quot;:&quot;6&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">63</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">false</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                        </hashTree>
+                        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="设置安防提醒修改-循环控制器" enabled="true">
+                          <boolProp name="LoopController.continue_forever">true</boolProp>
+                          <stringProp name="LoopController.loops">12</stringProp>
+                        </LoopController>
+                        <hashTree>
+                          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒修改-${testcase_notifyModify}" enabled="true">
+                            <stringProp name="TCPSampler.server"></stringProp>
+                            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                            <stringProp name="TCPSampler.port"></stringProp>
+                            <boolProp name="TCPSampler.nodelay">false</boolProp>
+                            <stringProp name="TCPSampler.timeout"></stringProp>
+                            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${__evalVar(${securityId_notifyModify})}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberModifyList&quot;: [{
+    	   &quot;warningMemberId&quot;: &quot;${__evalVar(${warningMemberId_notifyModify})}&quot;,
+        &quot;memberName&quot;: &quot;${memberName_notifyModify}&quot;,
+        &quot;memberPhone&quot;: &quot;${memberPhone_notifyModify}&quot;,
+        &quot;memberSortNum&quot;:&quot;${memberSortNum_notifyModify}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                            <stringProp name="TCPSampler.sessionId"></stringProp>
+                            <boolProp name="TCPSampler.isPk">false</boolProp>
+                            <stringProp name="TCPSampler.dkey"></stringProp>
+                            <stringProp name="TCPSampler.version"></stringProp>
+                            <stringProp name="ConfigTestElement.username"></stringProp>
+                            <stringProp name="ConfigTestElement.password"></stringProp>
+                          </TCPSampler>
+                          <hashTree>
+                            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="security_module_notifyAdd" enabled="true">
+                              <stringProp name="filename">../data/security_module_notifyModify.csv</stringProp>
+                              <stringProp name="fileEncoding">gbk</stringProp>
+                              <stringProp name="variableNames"></stringProp>
+                              <boolProp name="ignoreFirstLine">false</boolProp>
+                              <stringProp name="delimiter">,</stringProp>
+                              <boolProp name="quotedData">false</boolProp>
+                              <boolProp name="recycle">false</boolProp>
+                              <boolProp name="stopThread">false</boolProp>
+                              <stringProp name="shareMode">shareMode.all</stringProp>
+                            </CSVDataSet>
+                            <hashTree/>
+                            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                              <stringProp name="ConstantTimer.delay">1000</stringProp>
+                            </ConstantTimer>
+                            <hashTree/>
+                            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                              <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                              <stringProp name="EXPECTED_VALUE">${assertion_notifyModify}</stringProp>
+                              <boolProp name="JSONVALIDATION">true</boolProp>
+                              <boolProp name="EXPECT_NULL">false</boolProp>
+                              <boolProp name="INVERT">false</boolProp>
+                              <boolProp name="ISREGEX">true</boolProp>
+                            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                            <hashTree/>
+                          </hashTree>
+                        </hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒删除-securityId无关联" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_other_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">0</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">true</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                        </hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒删除-securityId错误" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">0</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">true</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                        </hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒删除-securityId空字符串" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">0</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">true</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                        </hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒删除-warningMemberId无关联" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId_other_1}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">0</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">true</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                        </hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒删除-warningMemberId空字符串" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">0</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">true</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                        </hashTree>
+                        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒删除-warningMemberDeleteList为空集" enabled="true">
+                          <stringProp name="TCPSampler.server"></stringProp>
+                          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                          <stringProp name="TCPSampler.port"></stringProp>
+                          <boolProp name="TCPSampler.nodelay">false</boolProp>
+                          <stringProp name="TCPSampler.timeout"></stringProp>
+                          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_other_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                          <stringProp name="TCPSampler.sessionId"></stringProp>
+                          <boolProp name="TCPSampler.isPk">false</boolProp>
+                          <stringProp name="TCPSampler.dkey"></stringProp>
+                          <stringProp name="TCPSampler.version"></stringProp>
+                          <stringProp name="ConfigTestElement.username"></stringProp>
+                          <stringProp name="ConfigTestElement.password"></stringProp>
+                        </TCPSampler>
+                        <hashTree>
+                          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                            <stringProp name="ConstantTimer.delay">1000</stringProp>
+                          </ConstantTimer>
+                          <hashTree/>
+                          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                            <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                            <stringProp name="EXPECTED_VALUE">0</stringProp>
+                            <boolProp name="JSONVALIDATION">true</boolProp>
+                            <boolProp name="EXPECT_NULL">false</boolProp>
+                            <boolProp name="INVERT">true</boolProp>
+                            <boolProp name="ISREGEX">true</boolProp>
+                          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                          <hashTree/>
+                        </hashTree>
+                      </hashTree>
+                    </hashTree>
+                  </hashTree>
+                </hashTree>
+                <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="设置安防提醒-查询要删除的warningMemberId" enabled="true">
+                  <stringProp name="dataSource">pool</stringProp>
+                  <stringProp name="query">select warningMemberId from warningMember where secWarningId = &quot;${secWarnindId}&quot; and delFlag = 0;</stringProp>
+                  <stringProp name="queryArguments"></stringProp>
+                  <stringProp name="queryArgumentsTypes"></stringProp>
+                  <stringProp name="queryTimeout"></stringProp>
+                  <stringProp name="queryType">Select Statement</stringProp>
+                  <stringProp name="resultSetHandler">Store as String</stringProp>
+                  <stringProp name="resultVariable"></stringProp>
+                  <stringProp name="variableNames">warningMemberList</stringProp>
+                </JDBCSampler>
+                <hashTree/>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置安防提醒-查询成功" enabled="true">
+                  <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                  <boolProp name="IfController.useExpression">true</boolProp>
+                </IfController>
+                <hashTree>
+                  <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="设置安防提醒-批量删除" enabled="true">
+                    <stringProp name="ForeachController.inputVal">warningMemberList</stringProp>
+                    <stringProp name="ForeachController.returnVal">warningMemberId</stringProp>
+                    <boolProp name="ForeachController.useSeparator">true</boolProp>
+                  </ForeachController>
+                  <hashTree>
+                    <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-正常删除" enabled="true">
+                      <stringProp name="TCPSampler.server"></stringProp>
+                      <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                      <stringProp name="TCPSampler.port"></stringProp>
+                      <boolProp name="TCPSampler.nodelay">false</boolProp>
+                      <stringProp name="TCPSampler.timeout"></stringProp>
+                      <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                      <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                      <stringProp name="TCPSampler.sessionId"></stringProp>
+                      <boolProp name="TCPSampler.isPk">false</boolProp>
+                      <stringProp name="TCPSampler.dkey"></stringProp>
+                      <stringProp name="TCPSampler.version"></stringProp>
+                      <stringProp name="ConfigTestElement.username"></stringProp>
+                      <stringProp name="ConfigTestElement.password"></stringProp>
+                    </TCPSampler>
+                    <hashTree>
+                      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                        <stringProp name="ConstantTimer.delay">1000</stringProp>
+                      </ConstantTimer>
+                      <hashTree/>
+                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                        <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                        <stringProp name="EXPECTED_VALUE">0</stringProp>
+                        <boolProp name="JSONVALIDATION">true</boolProp>
+                        <boolProp name="EXPECT_NULL">false</boolProp>
+                        <boolProp name="INVERT">false</boolProp>
+                        <boolProp name="ISREGEX">true</boolProp>
+                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                      <hashTree/>
+                    </hashTree>
+                  </hashTree>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-securityId为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: null,
+    &quot;warningType&quot;: 0,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-warningType为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: null,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-warningMemberAddList为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberAddList&quot;: null,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-warningMemberModifyList为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberModifyList&quot;: null,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-warningMemberDeleteList为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberModifyList&quot;: null,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-warningMemberId为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberModifyList&quot;:  [{
+        &quot;warningMemberId&quot;: null,
+        &quot;memberName&quot;: &quot;13510951447&quot;,
+        &quot;memberPhone&quot;: &quot;13510951447&quot;,
+        &quot;memberSortNum&quot;:4
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-memberName为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberModifyList&quot;:  [{
+        &quot;warningMemberId&quot;: &quot;7b2c13b57d7d41628bb783c6cd43a780&quot;,
+        &quot;memberName&quot;: null,
+        &quot;memberPhone&quot;: &quot;13510951447&quot;,
+        &quot;memberSortNum&quot;:4
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-memberPhone为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberModifyList&quot;:  [{
+        &quot;warningMemberId&quot;: &quot;7b2c13b57d7d41628bb783c6cd43a780&quot;,
+        &quot;memberName&quot;: &quot;13510951447&quot;,
+        &quot;memberPhone&quot;: null,
+        &quot;memberSortNum&quot;:4
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置安防提醒-memberSortNum为null" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${securityId_home_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;warningMemberModifyList&quot;:  [{
+        &quot;warningMemberId&quot;: &quot;7b2c13b57d7d41628bb783c6cd43a780&quot;,
+        &quot;memberName&quot;: &quot;13510951447&quot;,
+        &quot;memberPhone&quot;: &quot;13510951447&quot;,
+        &quot;memberSortNum&quot;: null
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1215614498">response is null</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果存在配电箱" enabled="true">
+              <stringProp name="IfController.condition">${__jexl3(${power_deviceId_#} &gt; 0)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+            </IfController>
+            <hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="配电箱有绑定" enabled="true">
+                <stringProp name="IfController.condition">${__jexl3(${power_bind_#} &gt; 0)}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <boolProp name="IfController.useExpression">true</boolProp>
+              </IfController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置App提醒-配电箱" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${power_bind_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置电话提醒新增-配电箱" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${power_bind_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberAddList&quot;: [{
+        &quot;memberName&quot;: &quot;13312345678&quot;,
+        &quot;memberPhone&quot;: &quot;13312345678&quot;,
+        &quot;memberSortNum&quot;:&quot;4&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="secWarnindId" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">secWarnindId</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;secWarnindId&quot;: &quot;(.*?)&quot;</stringProp>
+                    <stringProp name="RegexExtractor.template">$1$</stringProp>
+                    <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="warningMemberId" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">warningMemberId</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;warningMemberId&quot;: &quot;(.*?)&quot;</stringProp>
+                    <stringProp name="RegexExtractor.template">$1$</stringProp>
+                    <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">false</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                  <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                    <stringProp name="ConstantTimer.delay">1000</stringProp>
+                  </ConstantTimer>
+                  <hashTree/>
+                </hashTree>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="设置电话提醒成功" enabled="true">
+                  <stringProp name="IfController.condition">${__jexl3(!&quot;${warningMemberId}&quot;.equals(&quot;NOTFOUND&quot;))}</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                  <boolProp name="IfController.useExpression">true</boolProp>
+                </IfController>
+                <hashTree>
+                  <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置电话提醒修改-配电箱memberName" enabled="true">
+                    <stringProp name="TCPSampler.server"></stringProp>
+                    <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                    <stringProp name="TCPSampler.port"></stringProp>
+                    <boolProp name="TCPSampler.nodelay">false</boolProp>
+                    <stringProp name="TCPSampler.timeout"></stringProp>
+                    <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${power_bind_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberModifyList&quot;: [{
+    	   &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;,
+        &quot;memberName&quot;:&quot;&apos;&quot;,
+        &quot;memberPhone&quot;: &quot;13312345678&quot;,
+        &quot;memberSortNum&quot;:&quot;5&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                    <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                    <stringProp name="TCPSampler.sessionId"></stringProp>
+                    <boolProp name="TCPSampler.isPk">false</boolProp>
+                    <stringProp name="TCPSampler.dkey"></stringProp>
+                    <stringProp name="TCPSampler.version"></stringProp>
+                    <stringProp name="ConfigTestElement.username"></stringProp>
+                    <stringProp name="ConfigTestElement.password"></stringProp>
+                  </TCPSampler>
+                  <hashTree>
+                    <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                      <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    </ConstantTimer>
+                    <hashTree/>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                      <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                      <stringProp name="EXPECTED_VALUE">0</stringProp>
+                      <boolProp name="JSONVALIDATION">true</boolProp>
+                      <boolProp name="EXPECT_NULL">false</boolProp>
+                      <boolProp name="INVERT">false</boolProp>
+                      <boolProp name="ISREGEX">true</boolProp>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                    <hashTree/>
+                  </hashTree>
+                  <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置电话提醒删除-配电箱" enabled="true">
+                    <stringProp name="TCPSampler.server"></stringProp>
+                    <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                    <stringProp name="TCPSampler.port"></stringProp>
+                    <boolProp name="TCPSampler.nodelay">false</boolProp>
+                    <stringProp name="TCPSampler.timeout"></stringProp>
+                    <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${power_bind_1}&quot;,
+    &quot;warningType&quot;: 1,
+    &quot;warningMemberDeleteList&quot;: [{
+        &quot;warningMemberId&quot;: &quot;${warningMemberId}&quot;
+    }],
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                    <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                    <stringProp name="TCPSampler.sessionId"></stringProp>
+                    <boolProp name="TCPSampler.isPk">false</boolProp>
+                    <stringProp name="TCPSampler.dkey"></stringProp>
+                    <stringProp name="TCPSampler.version"></stringProp>
+                    <stringProp name="ConfigTestElement.username"></stringProp>
+                    <stringProp name="ConfigTestElement.password"></stringProp>
+                  </TCPSampler>
+                  <hashTree>
+                    <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                      <stringProp name="ConstantTimer.delay">1000</stringProp>
+                    </ConstantTimer>
+                    <hashTree/>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                      <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                      <stringProp name="EXPECTED_VALUE">0</stringProp>
+                      <boolProp name="JSONVALIDATION">true</boolProp>
+                      <boolProp name="EXPECT_NULL">false</boolProp>
+                      <boolProp name="INVERT">false</boolProp>
+                      <boolProp name="ISREGEX">true</boolProp>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                    <hashTree/>
+                  </hashTree>
+                </hashTree>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="配电箱无绑定" enabled="true">
+                <stringProp name="IfController.condition">${__jexl3(${power_bind_#} == 0)}</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <boolProp name="IfController.useExpression">true</boolProp>
+              </IfController>
+              <hashTree>
+                <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="设置App提醒-配电箱无操作权限" enabled="true">
+                  <stringProp name="TCPSampler.server"></stringProp>
+                  <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                  <stringProp name="TCPSampler.port"></stringProp>
+                  <boolProp name="TCPSampler.nodelay">false</boolProp>
+                  <stringProp name="TCPSampler.timeout"></stringProp>
+                  <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 131,
+    &quot;userId&quot;: &quot;${userId_1}&quot;,
+    &quot;securityId&quot;: &quot;${power_deviceId_1}&quot;,
+    &quot;warningType&quot;: 0,
+    &quot;lastUpdateTime&quot;:&quot;${__time(/1000,)}&quot;
+}</stringProp>
+                  <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                  <stringProp name="TCPSampler.sessionId"></stringProp>
+                  <boolProp name="TCPSampler.isPk">false</boolProp>
+                  <stringProp name="TCPSampler.dkey"></stringProp>
+                  <stringProp name="TCPSampler.version"></stringProp>
+                  <stringProp name="ConfigTestElement.username"></stringProp>
+                  <stringProp name="ConfigTestElement.password"></stringProp>
+                </TCPSampler>
+                <hashTree>
+                  <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="status - JSON Path Assertion" enabled="true">
+                    <stringProp name="JSON_PATH">$.payload.status</stringProp>
+                    <stringProp name="EXPECTED_VALUE">0</stringProp>
+                    <boolProp name="JSONVALIDATION">true</boolProp>
+                    <boolProp name="EXPECT_NULL">false</boolProp>
+                    <boolProp name="INVERT">true</boolProp>
+                    <boolProp name="ISREGEX">true</boolProp>
+                  </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

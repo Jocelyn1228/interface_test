@@ -1,0 +1,4 @@
+RGB灯2：move to hue（色度值:180）,3,0,0,cbb53bf9c5f74d46b3f717d83c93376a,RGB灯调色度180,color control,0,0,200,30
+RGB灯2：move to saturation,1,0,0,cbb53bf9c5f74d46b3f717d83c93376a,move to saturation,off,0,0,200,30
+RGB灯2：move hue and saturation,2,0,0,cbb53bf9c5f74d46b3f717d83c93376a,move hue and saturation1,on,0,200,150,90
+RGB灯2：move hue and saturation,4,0,0,cbb53bf9c5f74d46b3f717d83c93376a,move hue and saturation2,off,1,200,150,90

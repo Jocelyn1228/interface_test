@@ -1,0 +1,18 @@
+caseName,uid,deviceId,order,value1,value2,value3,value4,crc,resultAssert
+【控制设备：Allone Pro的RF设备】RF灯：开,6001940af5de,37f348555db245b98d5c69a8130fcec3,rf control,0,0,0,0,5700949F,"""status"": 0"
+【控制设备：Allone Pro的RF设备】RF灯：关,6001940af5de,37f348555db245b98d5c69a8130fcec3,rf control,1,0,0,0,5700949F,"""status"": 0"
+【控制设备：Allone Pro的RF设备】RF灯：翻转,6001940af5de,37f348555db245b98d5c69a8130fcec3,rf control,2,0,0,0,5700949F,"""status"": 0"
+【控制设备：Allone Pro的RF设备】RF灯:value1的值错误,6001940af5de,37f348555db245b98d5c69a8130fcec3,rf control,9,0,0,0,5700949F,"""status"": 114"
+【控制设备：Allone Pro的RF设备】RF电机：开,6001940af5de,626b65ce5e5b40989aca2136579e914e,rf control,380000,0,0,0,5E9E88EC,"""status"": 0"
+【控制设备：Allone Pro的RF设备】RF电机：关,6001940af5de,626b65ce5e5b40989aca2136579e914e,rf control,380001,0,0,0,5E9E88EC,"""status"": 0"
+【控制设备：Allone Pro的RF设备】RF电机：停,6001940af5de,626b65ce5e5b40989aca2136579e914e,rf control,380002,0,0,0,5E9E88EC,"""status"": 0"
+【控制设备：Allone Pro的RF设备】RF电机：order有误,6001940af5de,626b65ce5e5b40989aca2136579e914e,control,380002,0,0,0,5E9E88EC,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：关,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381000,0,0,9CF45D2E,"""status"": 0",
+【控制设备：Allone Pro的RF设备】晾衣机：照明,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381001,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：风干,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381002,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：烘干,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381003,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：消毒,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381004,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：上移,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381005,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：停止,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381006,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】晾衣机：下移,6001940af5de,8e9eef1bbcae42f4b3903a6cb4f9768d,rf control,381007,0,0,0,9CF45D2E,"""status"": 0"
+【控制设备：Allone Pro的RF设备】添加RF遥控器，配对成功,6001940af5de,b5f3b8b9df8b46d2b28c1d547eeb9b1c,rf control,-2,0,0,0,13444446,"""status"": 0"

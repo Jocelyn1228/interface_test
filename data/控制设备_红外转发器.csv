@@ -1,0 +1,13 @@
+caseName,uid,deviceId,order,crc,resultAssert
+【控制设备：红外转发器】空调：点击【制冷】按钮,5cffffe200b2,fc2364fe7e0845fa92c846392d645634,311000,B643EAF1,"""status"": 0"
+【控制设备：红外转发器】空调：组合码控制,5cffffe200b2,fc2364fe7e0845fa92c846392d645634,2210116,B643EAF1,"""status"": 0"
+【控制设备：红外转发器】电视机：点击【1】按钮,5cffffe200b2,03cb7eeb9abe40d78b53b9bd184c2055,310101,9231A8C1,"""status"": 0"
+【控制设备：红外转发器】机顶盒：点击【1】按钮,5cffffe200b2,6c371033fc9e4bd2b982fb7fe050462a,310201,2.63E+10,"""status"": 0"
+【控制设备：红外转发器】自定义遥控器：点击第一个按钮,5cffffe200b2,21e101dc13d44755a19a82ce45d6b673,370000,CABF354A,"""status"": 0"
+【控制设备：红外转发器】必填项校验,null,null,null,null,"""status"": 0"
+【控制设备：红外转发器】uid为空,null,03cb7eeb9abe40d78b53b9bd184c2055,310101,9231A8C1,"""status"": 0"
+【控制设备：红外转发器】deviceId为空,5cffffe200b2,null,310201,2.63E+10,"""status"": 0"
+【控制设备：红外转发器】order为空,5cffffe200b2,6c371033fc9e4bd2b982fb7fe050462a,null,2.63E+10,"""status"": 0"
+【控制设备：红外转发器】order不合理,5cffffe200b2,6c371033fc9e4bd2b982fb7fe050462a,0,2.63E+10,"""status"": 0"
+【控制设备：红外转发器】crc为空,5cffffe200b2,6c371033fc9e4bd2b982fb7fe050462a,310201,null,"""status"": 0"
+【控制设备：红外转发器】自定义遥控器：给没有学习红外码的设备发送指令,5cffffe200b2,21e101dc13d44755a19a82ce45d6b673,370002,CABF354A,"""status"": 26"

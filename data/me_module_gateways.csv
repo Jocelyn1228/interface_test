@@ -1,0 +1,5 @@
+testcase_gateways,familyId_gateways,assertion_gateways
+正常,258cc7b9301b42c498b889db056c0335,0
+familyId无主机,b094908e9a3d4cb7981331eb055d0d63,0
+familyId为空字符串,,1
+familyId无关联,00a429c883534c02af98a8fb1d5b6ab9,1

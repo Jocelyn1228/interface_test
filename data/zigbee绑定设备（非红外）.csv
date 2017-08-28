@@ -1,0 +1,34 @@
+开关（灯1）：开,1,0,0,07885ad8e0ca45858611504d80793039,灯1开,on,0,0,0,0
+开关（灯1）：关,4,0,0,07885ad8e0ca45858611504d80793039,灯1关,off,0,0,0,0
+S30插座：开,1,0,0,994af95626fb4852b3f1d818eecc0917,S30开,on,0,0,0,0
+S30插座：关,4,0,0,994af95626fb4852b3f1d818eecc0917,S30关,off,0,0,0,0
+继电器：开,1,0,0,6dae91316ecc4ff8befe0a5236e6c26b,继电器开,on,0,0,0,0
+继电器：关,4,0,0,6dae91316ecc4ff8befe0a5236e6c26b,继电器关,off,0,0,0,0
+调光灯（调光灯1）：开,5,0,0,45c852eee0464cefb8e17f65751b31e8,调光灯开,on,0,0,0,0
+调光灯（调光灯1）：亮度调为20,6,0,0,45c852eee0464cefb8e17f65751b31e8,亮度为20,move to level,0,20,0,0
+调光灯（调光灯1）：亮度调为255,8,0,0,45c852eee0464cefb8e17f65751b31e8,亮度为255,move to level,0,255,0,0
+调光灯（调光灯1）：关,11,0,0,45c852eee0464cefb8e17f65751b31e8,关,off,1,0,0,0
+色温灯：开（饱和度30）,12,0,0,dc210852957d487382ef1941de014f91,色温灯开,on,0,200,30,0
+色温灯:饱和度80,13,0,0,dc210852957d487382ef1941de014f91,色温灯饱和度80,color temperature,0,130,80,0
+色温灯：饱和度400,6,0,0,dc210852957d487382ef1941de014f91,色温灯饱和度400,color temperature,0,10,400,0
+色温灯：关,8,0,0,dc210852957d487382ef1941de014f91,色温灯关,off,1,10,400,0
+RGB灯：开（色度值:80）,9,0,0,05d1f57f9ac7493ea289d54f051c7d1b,RGB灯开,on,0,200,30,80
+RGB灯：move to hue（色度值:180）,10,0,0,05d1f57f9ac7493ea289d54f051c7d1b,RGB灯调色度180,move to hue,0,200,30,180
+RGB灯：move to saturation,11,0,0,05d1f57f9ac7493ea289d54f051c7d1b,move to saturation,move to saturation,0,200,30,180
+RGB灯：move hue and saturation,12,0,0,05d1f57f9ac7493ea289d54f051c7d1b,move hue and saturation1,move to saturation,0,200,150,90
+RGB灯：move hue and saturation,13,0,0,05d1f57f9ac7493ea289d54f051c7d1b,move hue and saturation2,move to saturation,1,200,150,90
+窗帘：开,1,0,0,b06299437ae44f458e3e403c5790a97a,窗帘：开,open,100,0,0,0
+RF灯：开,5,0,0,37f348555db245b98d5c69a8130fcec3,RF灯：开,rf control,0,0,0,0
+RF灯：关,6,0,0,37f348555db245b98d5c69a8130fcec3,RF灯：关,rf control,1,0,0,0
+RF灯：翻转,7,0,0,37f348555db245b98d5c69a8130fcec3,RF灯：翻转,rf control,2,0,0,0
+RF电机：开,8,0,0,626b65ce5e5b40989aca2136579e914e,RF电机：开,rf control,380000,0,0,0
+RF电机：关,9,0,0,626b65ce5e5b40989aca2136579e914e,RF电机：关,rf control,380001,0,0,0
+RF电机：停,10,0,0,626b65ce5e5b40989aca2136579e914e,RF电机：停,rf control,380002,0,0,0
+晾衣机：关,11,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：关,rf control,381000,0,0,0
+晾衣机：照明,12,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：照明,rf control,381001,0,0,0
+晾衣机：风干,13,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：风干,rf control,381002,0,0,0
+晾衣机：烘干,14,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：烘干,rf control,381003,0,0,0
+晾衣机：消毒,15,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：消毒,rf control,381004,0,0,0
+晾衣机：上移,16,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：上移,rf control,381005,0,0,0
+晾衣机：停止,17,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：停止,rf control,381006,0,0,0
+晾衣机：下移,18,0,0,8e9eef1bbcae42f4b3903a6cb4f9768d,晾衣机：下移,rf control,381007,0,0,0

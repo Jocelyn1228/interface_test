@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="ant-jmeter-test" default="all" basedir=".">
+
+    <tstamp>
+        <format property="time" pattern="yyyyMMddHHmm" />
+    </tstamp>
+	
+    <!-- 需要改成自己本地的 Jmeter 目录 -->
+	<property environment="SystemVariable" />
+	<property name="jmeter.home" value="${SystemVariable.JMETER_HOME}" />
+	
+	<!-- title of report -->
+	<property name="report.title" value="Test_Report"/>
+	
+	<!-- jmeter生成jtl格式的结果报告的路径-->
+	<property name="jmeter.result.jtl.dir" value="results/jtl" />
+	
+	<!-- jmeter生成html格式的结果报告的路径-->
+	<property name="jmeter.result.html.dir" value="results/html" />
+	
+	
+	<property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${report.title}.jtl" />
+	<property name="jmeter.result.htmlName" value="${jmeter.result.html.dir}/${report.title}.html" />
+
+	<!--通过Jenkins的build编号命名-->
+	<!--
+	<property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${build.name}.jtl" />
+	<property name="jmeter.result.htmlName" value="${jmeter.result.html.dir}/${build.name}.html" />
+	-->
+
+	<echo message="${jmeter.result.jtlName}"/>
+	<echo message="${jmeter.result.htmlName}"/>
+	<echo message="${jmeter.result.html.dir}"/>
+	<echo message="${jmeter.home}"/>
+
+    <target name="all" >
+        <antcall target="test"/>
+        <antcall target="report"/>
+	
+    </target>
+	
+	<target name="clean">  
+        <delete>  
+            <fileset dir="." includes="**/results/jtl/*.*"/>  
+        </delete>  
+    </target>  
+    
+    <target name="test" depends="clean">
+        <taskdef name="jmeter" 
+			classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" >
+			<classpath>
+				<pathelement location="${jmeter.home}/extras/ant-jmeter-1.1.1.jar"/>
+			</classpath>
+		</taskdef>
+        <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}">
+            <!-- 声明要运行的脚本。"*.jmx"指包含此目录下的所有jmeter脚本-->
+			<testplans dir="scripts\" includes="*.jmx"/>      
+        </jmeter>
+    </target>
+        
+		
+	 <path id="xslt.classpath">
+        <fileset dir="${jmeter.home}/lib" includes="xalan-2.7.2.jar"/>
+        <fileset dir="${jmeter.home}/lib" includes="serializer-2.7.2.jar"/>
+    </path>
+	
+
+    <target name="report" depends="xslt-report,copy-images">
+	        <echo>Report generated at ${report.datestamp}</echo>
+    </target>
+
+    <target name="xslt-report" depends="_message_xalan">
+		<tstamp><format property="report.datestamp" pattern="yyyy/MM/dd HH:mm"/></tstamp>
+		 
+        <xslt 
+			classpathref="xslt.classpath"
+			force="true"
+			in="${jmeter.result.jtlName}"
+			out="${jmeter.result.htmlName}"
+			style="extras/jmeter-results-detail-report_21.xsl">
+			<param name="titleReport" expression="${report.title}"/>
+			<param name="dateReport" expression="${report.datestamp}"/>
+		</xslt>
+	
+    </target>
+	
+	<!-- Copy report images if needed -->
+    <target name="copy-images" depends="verify-images" unless="samepath">
+        <copy file="${jmeter.home}/extras/expand.png" tofile="${jmeter.result.html.dir}/expand.png"/>
+        <copy file="${jmeter.home}/extras/collapse.png" tofile="${jmeter.result.html.dir}/collapse.png"/>
+    </target>
+
+    <target name="verify-images">
+        <condition property="samepath">
+                <equals arg1="${jmeter.home}/extras" arg2="${jmeter.result.html.dir}" />
+        </condition>
+    </target>
+
+    <!-- Check that the xalan libraries are present -->
+    <condition property="xalan.present">
+          <and>
+              <!-- No need to check all jars; just check a few -->
+            <available classpathref="xslt.classpath" classname="org.apache.xalan.processor.TransformerFactoryImpl"/>
+            <available classpathref="xslt.classpath" classname="org.apache.xml.serializer.ExtendedContentHandler"/>
+          </and>
+    </condition>
+
+    <target name="_message_xalan" unless="xalan.present">
+          <echo>Cannot find all xalan and/or serialiser jars</echo>
+        <echo>The XSLT formatting may not work correctly.</echo>
+        <echo>Check you have xalan and serializer jars in ${lib.dir}</echo>
+    </target>
+
+</project>

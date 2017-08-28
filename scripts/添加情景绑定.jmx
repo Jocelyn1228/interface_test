@@ -1,0 +1,2862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="添加情景绑定" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1496909078000</longProp>
+        <longProp name="ThreadGroup.end_time">1496909078000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="情景绑定用户参数" enabled="true">
+          <collectionProp name="UserParameters.names">
+            <stringProp name="3367">ip</stringProp>
+            <stringProp name="3446913">port</stringProp>
+            <stringProp name="-836030906">userId</stringProp>
+            <stringProp name="-896505829">source</stringProp>
+            <stringProp name="-206887605">sysVersion</stringProp>
+            <stringProp name="-1903502896">hardwareVersion</stringProp>
+            <stringProp name="96619420">email</stringProp>
+            <stringProp name="94988720">ctime</stringProp>
+            <stringProp name="787422111">familyId</stringProp>
+            <stringProp name="1216985755">password</stringProp>
+            <stringProp name="116643">ver</stringProp>
+            <stringProp name="-1008770397">order1</stringProp>
+            <stringProp name="-1008770396">order2</stringProp>
+          </collectionProp>
+          <collectionProp name="UserParameters.thread_values">
+            <collectionProp name="1608567815">
+              <stringProp name="-2050349515">192.168.2.176</stringProp>
+              <stringProp name="46730162">10001</stringProp>
+              <stringProp name="1600585815">53049fdf57d840ad8bb12a52bed23053</stringProp>
+              <stringProp name="-1976389973">ZhiJia365</stringProp>
+              <stringProp name="415898070">Android4.4.4_19</stringProp>
+              <stringProp name="-160522773">HUAWEI Che1-CL10</stringProp>
+              <stringProp name="-822227100">xuhuilin@orvibo.com</stringProp>
+              <stringProp name="-1777990346">${__time(/1000,)}</stringProp>
+              <stringProp name="1251494945">258cc7b9301b42c498b889db056c0335</stringProp>
+              <stringProp name="1264603118">25F9E794323B453885F5181F1B624D0B</stringProp>
+              <stringProp name="-457767423">2.5.0.301</stringProp>
+              <stringProp name="-802247845">outside security</stringProp>
+              <stringProp name="-2139897116">inside security</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <boolProp name="UserParameters.per_iteration">false</boolProp>
+        </UserParameters>
+        <hashTree/>
+        <ConfigTestElement guiclass="org.apache.jmeter.protocol.tcp.config.gui.TCP4HomemateConfigGui" testclass="ConfigTestElement" testname="TCP智家365取样器配置" enabled="true">
+          <stringProp name="TCPSampler.server">${ip}</stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port">10001</stringProp>
+          <boolProp name="TCPSampler.nodelay">true</boolProp>
+          <stringProp name="TCPSampler.timeout">5000</stringProp>
+          <stringProp name="TCPSampler.request"></stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="TCPSampler.classname">com.orvibo.test.sampler.HMTCPClientImpl</stringProp>
+          <stringProp name="TCPSampler.soLinger">0</stringProp>
+          <stringProp name="TCPSampler.EolByte">1000</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="情景绑定申请通信密钥" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">true</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;softwareVersion&quot;:&quot;64&quot;,&quot;cmd&quot;:&quot;0&quot;,&quot;language&quot;:&quot;chinese&quot;,&quot;source&quot;:&quot;ZhiJia365&quot;,&quot;sysVersion&quot;:&quot;ios10.2.1&quot;,&quot;hardwareVersion&quot;:&quot;iphone6&quot;}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.soLinger">0</stringProp>
+          <stringProp name="TCPSampler.EolByte">1000</stringProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">true</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="SessionId" enabled="true">
+            <stringProp name="VAR">sessionId</stringProp>
+            <stringProp name="JSONPATH">$.SessionId</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="dkey" enabled="true">
+            <stringProp name="VAR">dkey</stringProp>
+            <stringProp name="JSONPATH">$.payload.key</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="情景绑定用户登录" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:2,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;password&quot;:&quot;${password}&quot;,&quot;type&quot;:3,&quot;familyId&quot;:&quot;${familyId}&quot;}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建情景用于添加删除情景绑定-用于绑定设备" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:191,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;familyId&quot;:&quot;${familyId}&quot;,&quot;sceneName&quot;:&quot;用于绑定设备&quot;,&quot;pic&quot;:3}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneNo" enabled="true">
+            <stringProp name="VAR">sceneNo</stringProp>
+            <stringProp name="JSONPATH">$.payload.scene.sceneNo</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-720333060">&quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果创建成功，则执行以下的case" enabled="true">
+          <stringProp name="IfController.condition">&quot;${sceneNo}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="zigbee设备情景绑定" enabled="false">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">24</stringProp>
+          </LoopController>
+          <hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定${casename}" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;${value1}&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;${value3}&quot;,
+            &quot;value4&quot;:&quot;${value4}&quot;,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: ${delayTime}
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+              <stringProp name="TCPSampler.version">${ver}</stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="delimiter">,</stringProp>
+                <stringProp name="fileEncoding">gbk</stringProp>
+                <stringProp name="filename">../data/添加情景绑定zigbee设备.csv</stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <boolProp name="quotedData">true</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <stringProp name="shareMode">shareMode.all</stringProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="variableNames"></stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+                <stringProp name="VAR">sceneBindId</stringProp>
+                <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="461893074">${assertion}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定${casename}" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;${value1}&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;${value3}&quot;,
+            &quot;value4&quot;:&quot;${value4}&quot;,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: ${delayTime}
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+              <stringProp name="TCPSampler.version">${ver}</stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="delimiter">,</stringProp>
+                <stringProp name="fileEncoding">gbk</stringProp>
+                <stringProp name="filename">../data/修改zigbee设备.csv</stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <boolProp name="quotedData">true</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <stringProp name="shareMode">shareMode.all</stringProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="variableNames"></stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="461893074">${assertion}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+             &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+            
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+              <stringProp name="TCPSampler.version">${ver}</stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="filename">../data/删除zigbee设备情景绑定.csv</stringProp>
+                <stringProp name="fileEncoding">gbk</stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <stringProp name="delimiter">,</stringProp>
+                <boolProp name="quotedData">true</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="shareMode">shareMode.all</stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="461893074">${assertion}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="wifi和zigbee设备添加绑定情景" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">16</stringProp>
+          </LoopController>
+          <hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定${casename}" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;${value1}&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;${value3}&quot;,
+            &quot;value4&quot;:&quot;${value4}&quot;,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: ${delayTime}
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+              <stringProp name="TCPSampler.version">${ver}</stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="delimiter">,</stringProp>
+                <stringProp name="fileEncoding">gbk</stringProp>
+                <stringProp name="filename">../data/添加情景绑定.csv</stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <boolProp name="quotedData">true</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <stringProp name="shareMode">shareMode.all</stringProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="variableNames"></stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+                <stringProp name="VAR">sceneBindId</stringProp>
+                <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="461893074">${assertion}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+              <stringProp name="IfController.condition">&quot;${sceneBindId}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定${casename}" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+           &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;${value1}&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;${value3}&quot;,
+            &quot;value4&quot;:&quot;${value4}&quot;,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: ${delayTime}
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+                <stringProp name="TCPSampler.version">${ver}</stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                  <stringProp name="delimiter">,</stringProp>
+                  <stringProp name="fileEncoding">gbk</stringProp>
+                  <stringProp name="filename">../data/修改wifi设备.csv</stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <boolProp name="quotedData">true</boolProp>
+                  <boolProp name="recycle">true</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                  <boolProp name="stopThread">true</boolProp>
+                  <stringProp name="variableNames"></stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId-update" enabled="true">
+                  <stringProp name="VAR">sceneBindId-update</stringProp>
+                  <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                  <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                  <stringProp name="VARIABLE"></stringProp>
+                  <stringProp name="SUBJECT">BODY</stringProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="461893074">${assertion}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;sceneBindId&quot;:&quot;${sceneBindId-update}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+                <stringProp name="TCPSampler.version">${ver}</stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                  <stringProp name="filename">../data/删除情景绑定.csv</stringProp>
+                  <stringProp name="fileEncoding">gbk</stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <stringProp name="delimiter">,</stringProp>
+                  <boolProp name="quotedData">true</boolProp>
+                  <boolProp name="recycle">true</boolProp>
+                  <boolProp name="stopThread">false</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="461893074">${assertion}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除用于绑定设备的情景" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:193,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;sceneNo&quot;:&quot;${sceneNo}&quot;,&quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建情景用于添加删除情景绑定-用于绑定红外设备" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:191,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;familyId&quot;:&quot;${familyId}&quot;,&quot;sceneName&quot;:&quot;用于绑定红外设备&quot;,&quot;pic&quot;:3}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneNo1" enabled="true">
+            <stringProp name="VAR">sceneNo1</stringProp>
+            <stringProp name="JSONPATH">$.payload.scene.sceneNo</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果创建成功，则执行以下的case" enabled="true">
+          <stringProp name="IfController.condition">&quot;${sceneNo1}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="红外设备添加绑定情景" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">7</stringProp>
+          </LoopController>
+          <hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定${casename}" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo1}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;${value1}&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;${value3}&quot;,
+            &quot;value4&quot;:&quot;${value4}&quot;,
+             &quot;freq&quot;:${freq},
+            &quot;pluseNum&quot;: ${pluseNum},
+            &quot;pluseData&quot;: &quot;${pluseData}&quot;,
+            &quot;delayTime&quot;: ${delayTime}
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+              <stringProp name="TCPSampler.version">${ver}</stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="delimiter">,</stringProp>
+                <stringProp name="fileEncoding">utf-8</stringProp>
+                <stringProp name="filename">../data/红外设备添加绑定情景.csv</stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <boolProp name="quotedData">true</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <stringProp name="shareMode">shareMode.all</stringProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="variableNames"></stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+                <stringProp name="VAR">sceneBindId</stringProp>
+                <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="461893074">${assertion}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+              <stringProp name="IfController.condition">&quot;${sceneBindId}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定${casename}" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo1}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;${value1}&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;${value3}&quot;,
+            &quot;value4&quot;:&quot;${value4}&quot;,
+            &quot;freq&quot;:${freq},
+            &quot;pluseNum&quot;:${pluseNum},
+            &quot;pluseData&quot;:&quot;${pluseData}&quot;,
+            &quot;delayTime&quot;: ${delayTime}
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+                <stringProp name="TCPSampler.version">${ver}</stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                  <stringProp name="delimiter">,</stringProp>
+                  <stringProp name="fileEncoding">utf-8</stringProp>
+                  <stringProp name="filename">../data/修改红外设备.csv</stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <boolProp name="quotedData">true</boolProp>
+                  <boolProp name="recycle">true</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                  <boolProp name="stopThread">true</boolProp>
+                  <stringProp name="variableNames"></stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId-update1" enabled="true">
+                  <stringProp name="VAR">sceneBindId-update1</stringProp>
+                  <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                  <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                  <stringProp name="VARIABLE"></stringProp>
+                  <stringProp name="SUBJECT">BODY</stringProp>
+                </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="461893074">${assertion}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo1}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;sceneBindId&quot;:&quot;${sceneBindId-update1}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+                <stringProp name="TCPSampler.version">${ver}</stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                  <stringProp name="filename">../data/红外删除绑定情景.csv</stringProp>
+                  <stringProp name="fileEncoding">utf-8</stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <stringProp name="delimiter">,</stringProp>
+                  <boolProp name="quotedData">true</boolProp>
+                  <boolProp name="recycle">true</boolProp>
+                  <boolProp name="stopThread">false</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="461893074">${assertion}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除用于绑定红外设备的情景" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:193,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;sceneNo&quot;:&quot;${sceneNo1}&quot;,&quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+          <stringProp name="ConstantTimer.delay">6000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建情景-用于添加情景异常" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:191,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;familyId&quot;:&quot;${familyId}&quot;,&quot;sceneName&quot;:&quot;添加情景异常&quot;,&quot;pic&quot;:4}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneNo2" enabled="true">
+            <stringProp name="VAR">sceneNo2</stringProp>
+            <stringProp name="JSONPATH">$.payload.scene.sceneNo</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常uid和deviceId不一致" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo2}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;2c3ae804b8ba&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常userName和deviceId不一致" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;13510951447&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo2}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除-添加情景绑定异常的情景" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:193,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;sceneNo&quot;:&quot;${sceneNo2}&quot;,&quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+          <stringProp name="ConstantTimer.delay">6000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建情景-用于删除情景异常" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:191,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;familyId&quot;:&quot;${familyId}&quot;,&quot;sceneName&quot;:&quot;删除情景异常&quot;,&quot;pic&quot;:3}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneNo3" enabled="true">
+            <stringProp name="VAR">sceneNo3</stringProp>
+            <stringProp name="JSONPATH">$.payload.scene.sceneNo</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定灯19-用于为删除铺垫" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo3}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;5fc45c1b0dfd4e9e950bb94ea41d4ce2&quot;,
+            &quot;actionName&quot;:&quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+            <stringProp name="VAR">sceneBindId</stringProp>
+            <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果情景创建成功则执行以下的case" enabled="true">
+          <stringProp name="IfController.condition">&quot;${sceneBindId}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景sceneNo为空" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+             &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1654449896"> &quot;status&quot;: 26</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景userName为空" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo3}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+            
+        
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景sceneBindId为空" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo3}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;sceneBindId&quot;:&quot;&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="970656258">response is null </stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景uid为空" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo3}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+             &quot;uid&quot;: &quot;&quot;,
+            &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除绑定情景userName和uid不一致" enabled="true">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo3}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;6001940af5de&quot;,
+             &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除-删除情景绑定异常的情景" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:193,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;sceneNo&quot;:&quot;${sceneNo3}&quot;,&quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+          <stringProp name="ConstantTimer.delay">6000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="查询主机的绑定状态" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:233,&quot;uidList&quot;:[&quot;5cffffe200b2&quot;]}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="查询主机的绑定状态  uid非本用户绑定" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:233,&quot;uidList&quot;:[&quot;5ccf7f0a0a69&quot;]}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId"></stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey"></stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建情景-用于添加情景安防绑定" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:191,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;familyId&quot;:&quot;${familyId}&quot;,&quot;sceneName&quot;:&quot;用于绑定安防&quot;,&quot;pic&quot;:3}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version">${ver}</stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneNo4" enabled="true">
+            <stringProp name="VAR">sceneNo4</stringProp>
+            <stringProp name="JSONPATH">$.payload.scene.sceneNo</stringProp>
+            <stringProp name="DEFAULT">NOTFOUND</stringProp>
+            <stringProp name="VARIABLE"></stringProp>
+            <stringProp name="SUBJECT">BODY</stringProp>
+          </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果情景创建成功则执行一下case" enabled="true">
+          <stringProp name="IfController.condition">&quot;${sceneNo}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="情景绑定安防-在家布防" enabled="true"/>
+          <hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="情景绑定安防-在家布防" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            
+            &quot;deviceId&quot;:&quot;258cc7b9301b42c498b889db056c0335&quot;,
+            &quot;actionName&quot;:&quot;在家安防&quot;,
+            &quot;order&quot;: &quot;inside security&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 10
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+                <stringProp name="VAR">sceneBindId</stringProp>
+                <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+              <stringProp name="IfController.condition">&quot;${sceneBindId}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定安防-修改为外出布防" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;actionName&quot;: &quot;外出布防&quot;,
+            &quot;order&quot;: &quot;inside security&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除情景绑定安防-在家布防" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           
+            &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="情景绑定安防-外出布防" enabled="true"/>
+          <hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="情景绑定安防-外出布防" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;deviceId&quot;:&quot;258cc7b9301b42c498b889db056c0335&quot;,
+            &quot;actionName&quot;:&quot;外出布防&quot;,
+            &quot;order&quot;: &quot;outside security&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 10
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+                <stringProp name="VAR">sceneBindId</stringProp>
+                <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+                <stringProp name="DEFAULT">NOTFOUND</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+              <stringProp name="IfController.condition">&quot;${sceneBindId}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定安防-修改为在家布防" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;, 
+            &quot;actionName&quot;: &quot;在家布防&quot;,
+            &quot;order&quot;: &quot;inside security&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 14
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除情景绑定安防-外出布防" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           
+            &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="情景绑定安防-撤防" enabled="true"/>
+          <hashTree>
+            <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="情景绑定安防-撤防" enabled="true">
+              <stringProp name="TCPSampler.server"></stringProp>
+              <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+              <stringProp name="TCPSampler.port"></stringProp>
+              <boolProp name="TCPSampler.nodelay">false</boolProp>
+              <stringProp name="TCPSampler.timeout"></stringProp>
+              <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+      
+            &quot;deviceId&quot;:&quot;258cc7b9301b42c498b889db056c0335&quot;,
+            &quot;actionName&quot;:&quot;撤防&quot;,
+            &quot;order&quot;: &quot;cancel security&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 10
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+              <boolProp name="TCPSampler.closeConnection">false</boolProp>
+              <stringProp name="TCPSampler.sessionId"></stringProp>
+              <boolProp name="TCPSampler.isPk">false</boolProp>
+              <stringProp name="TCPSampler.dkey"></stringProp>
+              <stringProp name="TCPSampler.version"></stringProp>
+              <stringProp name="ConfigTestElement.username"></stringProp>
+              <stringProp name="ConfigTestElement.password"></stringProp>
+            </TCPSampler>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+              <stringProp name="IfController.condition">&quot;${sceneBindId}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定安防-撤防" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;actionName&quot;: &quot;在家安防&quot;,
+            &quot;order&quot;: &quot;inside security&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:42
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree/>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除情景绑定安防-撤防" enabled="true">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 196,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo4}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+          
+            &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;
+        }
+    ],
+    &quot;lastUpdateTime&quot;: ${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId"></stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey"></stringProp>
+                <stringProp name="TCPSampler.version"></stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="删除-绑定安防的情景" enabled="true">
+          <stringProp name="TCPSampler.server"></stringProp>
+          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+          <stringProp name="TCPSampler.port"></stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout"></stringProp>
+          <stringProp name="TCPSampler.request">{&quot;cmd&quot;:193,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;sceneNo&quot;:&quot;${sceneNo4}&quot;,&quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}}</stringProp>
+          <boolProp name="TCPSampler.closeConnection">false</boolProp>
+          <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+          <boolProp name="TCPSampler.isPk">false</boolProp>
+          <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+          <stringProp name="TCPSampler.version"></stringProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="异常情况" enabled="false"/>
+        <hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="查询主机的绑定状态  uidList字段为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:233,&quot;uidList&quot;:[&quot;&quot;]}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="查询主机的绑定状态 uidList字段不存在" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:233}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="创建情景用于修改情景绑定异常" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{&quot;cmd&quot;:191,&quot;userName&quot;:&quot;xuhuilin@orvibo.com&quot;,&quot;familyId&quot;:&quot;${familyId}&quot;,&quot;sceneName&quot;:&quot;addscenezq2&quot;,&quot;pic&quot;:3}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneNo" enabled="true">
+              <stringProp name="VAR">sceneNo</stringProp>
+              <stringProp name="JSONPATH">$.payload.scene.sceneNo</stringProp>
+              <stringProp name="DEFAULT">NOTFOUND</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常绑定灯3" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;bbae67d59d6c4074babc180747e8a5fe&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:100,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="sceneBindId" enabled="true">
+              <stringProp name="VAR">sceneBindId</stringProp>
+              <stringProp name="JSONPATH">$.payload.successList[0].sceneBindId</stringProp>
+              <stringProp name="DEFAULT">NOTFOUND</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景异常sceneNo为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b05a1e5ca75742c5b6f8d3d10cdc2a90,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定异常sceneBindId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b05a1e5ca75742c5b6f8d3d10cdc2a90,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定异常uid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;uid&quot;: &quot;&quot;,
+            &quot;deviceId&quot;: &quot;b05a1e5ca75742c5b6f8d3d10cdc2a90,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定异常deviceId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定安防异常order为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;fe7a3e456d514bf99e89e4bd69ed3370&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;d7040ad281eb4d7684523542bb70d3bd&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b05a1e5ca75742c5b6f8d3d10cdc2a90,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定异常uid和deviceId不匹配" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;aede78b00d4e40a8821e16299c35e7ec&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定异常sceneBindId与sceneNo不匹配" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;fe7a3e456d514bf99e89e4bd69ed3370&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;${sceneBindId}&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b05a1e5ca75742c5b6f8d3d10cdc2a90&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="修改情景绑定异常userName与sceneBindId不匹配" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 195,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+           &quot;sceneBindId&quot;:&quot;d7040ad281eb4d7684523542bb70d3bd&quot;,
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b05a1e5ca75742c5b6f8d3d10cdc2a90,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;on&quot;,
+            &quot;value1&quot;:0,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;:30
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId"></stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey"></stringProp>
+            <stringProp name="TCPSampler.version"></stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653348"> &quot;status&quot;: 0</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="创建失败 不执行绑定情景" enabled="false">
+            <stringProp name="IfController.condition">&quot;${sceneNo}&quot;!=&quot;NOTFOUND&quot;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="添加情景绑定异常" enabled="false">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">5</stringProp>
+            </LoopController>
+            <hashTree>
+              <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常${casename}" enabled="false">
+                <stringProp name="TCPSampler.server"></stringProp>
+                <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+                <stringProp name="TCPSampler.port"></stringProp>
+                <boolProp name="TCPSampler.nodelay">false</boolProp>
+                <stringProp name="TCPSampler.timeout"></stringProp>
+                <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;${uid}&quot;,
+            &quot;deviceId&quot;: &quot;${deviceId}&quot;,
+            &quot;actionName&quot;: &quot;${actionName}&quot;,
+            &quot;order&quot;: &quot;${order}&quot;,
+            &quot;value1&quot;:&quot;0&quot;,
+            &quot;value2&quot;:&quot;${value2}&quot;,
+            &quot;value3&quot;:&quot;0&quot;,
+            &quot;value4&quot;:&quot;0&quot;,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+                <boolProp name="TCPSampler.closeConnection">false</boolProp>
+                <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+                <boolProp name="TCPSampler.isPk">false</boolProp>
+                <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+                <stringProp name="TCPSampler.version">${ver}</stringProp>
+                <stringProp name="ConfigTestElement.username"></stringProp>
+                <stringProp name="ConfigTestElement.password"></stringProp>
+              </TCPSampler>
+              <hashTree>
+                <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
+                  <stringProp name="delimiter">,</stringProp>
+                  <stringProp name="fileEncoding">gbk</stringProp>
+                  <stringProp name="filename">../data/添加情景绑定异常.csv</stringProp>
+                  <boolProp name="ignoreFirstLine">false</boolProp>
+                  <boolProp name="quotedData">true</boolProp>
+                  <boolProp name="recycle">true</boolProp>
+                  <stringProp name="shareMode">shareMode.all</stringProp>
+                  <boolProp name="stopThread">false</boolProp>
+                  <stringProp name="variableNames"></stringProp>
+                </CSVDataSet>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="461893074">${assertion}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常uid为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常deviceId为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1215614498">response is null</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常actionName为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常order为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常value1为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:null,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="970656258">response is null </stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常userName为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;&quot;,
+    &quot;sceneNo&quot;: &quot;${sceneNo}&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="添加情景绑定异常sceneNo为空" enabled="false">
+            <stringProp name="TCPSampler.server"></stringProp>
+            <boolProp name="TCPSampler.reUseConnection">true</boolProp>
+            <stringProp name="TCPSampler.port"></stringProp>
+            <boolProp name="TCPSampler.nodelay">false</boolProp>
+            <stringProp name="TCPSampler.timeout"></stringProp>
+            <stringProp name="TCPSampler.request">{
+    &quot;cmd&quot;: 194,
+    &quot;userName&quot;: &quot;xuhuilin@orvibo.com&quot;,
+    &quot;sceneNo&quot;: &quot;&quot;,
+    &quot;sceneBindList&quot;: [
+        {
+            &quot;uid&quot;: &quot;5cffffe200b2&quot;,
+            &quot;deviceId&quot;: &quot;b06299437ae44f458e3e403c5790a97a&quot;,
+            &quot;actionName&quot;: &quot;开&quot;,
+            &quot;order&quot;: &quot;open&quot;,
+            &quot;value1&quot;:100,
+            &quot;value2&quot;:0,
+            &quot;value3&quot;:0,
+            &quot;value4&quot;:0,
+            &quot;freq&quot;: 0,
+            &quot;pluseNum&quot;: 0,
+            &quot;pluseData&quot;: &quot;&quot;,
+            &quot;delayTime&quot;: 0
+        }
+    ],
+    &quot;lastUpdateTime&quot;:${__intSum(${__time(/1000,)},+1000,)}
+}</stringProp>
+            <boolProp name="TCPSampler.closeConnection">false</boolProp>
+            <stringProp name="TCPSampler.sessionId">${sessionId}</stringProp>
+            <boolProp name="TCPSampler.isPk">false</boolProp>
+            <stringProp name="TCPSampler.dkey">${dkey}</stringProp>
+            <stringProp name="TCPSampler.version">${ver}</stringProp>
+            <stringProp name="ConfigTestElement.username"></stringProp>
+            <stringProp name="ConfigTestElement.password"></stringProp>
+          </TCPSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-884653347"> &quot;status&quot;: 1</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

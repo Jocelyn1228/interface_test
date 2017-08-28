@@ -1,0 +1,4 @@
+testcase_usermessage,tableName_usermessage,minSequence_usermessage,maxSequence_usermessage,readCount_usermessage,assertion_usermessage
+正常(安防),messageSecurity,-1,-1,20,0
+正常(非安防),messageCommon,-1,-1,20,0
+readCount等于51,messageSecurity,-1,-1,51,1

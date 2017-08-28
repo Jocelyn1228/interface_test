@@ -1,0 +1,4 @@
+testcase_modify,familyName_modify,familyId_modify,assertion_modify
+familyName为空字符,,familyId_1,1
+familyId无关联,修改家庭,familyId_other_1,1
+正常,有设备家庭,familyId_1,0
